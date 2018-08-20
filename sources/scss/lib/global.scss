@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/futura.woff2') format('woff2'), url('../fonts/futura.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  background-color: #f2f2f1;
+  font-family: 'Futura';
+  font-size: 16px;
+  line-height: 1.4;
+  color: #666666;
+}
+
+* {
+  font-weight: normal;
+  backface-visibility: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #010101;
+  margin: 0;
+}
+
+.base {
+  &__header, &__footer {
+    flex:none;
+  }
+  &__content {
+    flex: 1;
+  }
+}
+
+.text {
+  &--ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

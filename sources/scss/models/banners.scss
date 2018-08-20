@@ -1,0 +1,52 @@
+.banner {
+  &__group {
+    a {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    background-color: #1d7fe0;
+    color: #ffffff;
+    text-decoration: none;
+    overflow: hidden;
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+      transition: .25s ease-in-out;
+    }
+
+    &:hover img {
+      opacity: 0.5;
+      filter: grayscale(1);
+      transform: scale(1.25)
+    }
+
+    .caption {
+      position: absolute;
+      padding: 0 30px;
+      left: 0;
+      right: 0;
+      bottom: 30px;
+
+      span {
+        display: block;
+      }
+
+      &__title {
+        font-size: 24px;
+        color: #ffffff;
+      }
+
+      &__price {
+        font-size: 20px;
+        color: #fffefe;
+        opacity: 0.6;
+      }
+    }
+  }
+}
