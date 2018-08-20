@@ -92,6 +92,11 @@
     align-items: center;
     padding: 15px 0 30px;
 
+    @include smallDown {
+      display: block;
+      text-align: center;
+    }
+
     &--title {
       display: block;
       margin: 0;
@@ -99,6 +104,10 @@
       flex: 1;
       font-size: 32px;
       line-height: 1;
+
+      @include smallDown {
+        margin-bottom: 15px;
+      }
     }
 
     &--buttons {
@@ -112,6 +121,10 @@
         margin-left: 30px;
         color: #010101;
         opacity: 0.6;
+
+        @include smallDown {
+          margin: 0 15px;
+        }
 
         &:hover {
           opacity: 1;
@@ -159,7 +172,7 @@
         transform: scale(1)
       }
       &:hover img {
-        opacity: 0.5;
+        opacity: 0.5 !important;
         filter: grayscale(1);
         transform: scale(1.25)
       }
@@ -204,6 +217,16 @@
 
 
 
+    }
+  }
+
+  &__viewed {
+    overflow: hidden;
+    padding: 15px 0;
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 15px;
     }
   }
 }

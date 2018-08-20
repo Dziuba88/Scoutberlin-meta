@@ -3,7 +3,7 @@ block content
   section.catalog
     .container
       .row
-        .col.lg-3.md-3
+        .col.lg-3.md-4
           include models/filters
           .banner__group
             a(href="").banner__item
@@ -16,7 +16,7 @@ block content
               span.caption
                 span.caption__title Harley Benton
                 span.caption__price $ 35 000 
-        .col.lg-9.md-9
+        .col.lg-9.md-8
           .catalog__featured
             .row
               - for(i=1;i<=3;i++)
@@ -39,7 +39,7 @@ block content
           .catalog__grid
             .row
               - for(i=1;i<=12;i++)
-                .col.md-4
+                .col.sm-6.lg-4
                   a(href="").catalog__grid--item
                     .image: img(src="img/catalog-item.png", alt="")
                     span.caption
@@ -47,6 +47,28 @@ block content
                       span.caption__info
                         span.caption__adress Bavaria
                         span.caption__price $ 35 000 
-
+          .pagination
+            ul
+              li: a(href='#'): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M19 11H7.4l5.3-5.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0l-6.9 6.9c-.2.2-.4.4-.4.8s.2.6.4.8l6.9 6.9c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L7.4 13H19c.6 0 1-.4 1-1s-.4-1-1-1z")
+              li: a(href='#') 1
+              li: a(href='#') 2
+              li.current: span 3
+              li.separator: span ...
+              li: a(href='#') 7
+              li: a(href='#') 8
+              li: a(href='#') 9
+              li: a(href='#'): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z")
+  section.catalog__viewed
+    .container
+      h2 Ранее просмотренные объявления
+      .owl-carousel(data-carousel='viewed')
+        - for(i=1;i<=15;i++)
+          .slide: a(href="").catalog__grid--item
+            .image: img(src="img/catalog-item.png", alt="")
+            span.caption
+              span.caption__title Harley Benton
+              span.caption__info
+                span.caption__adress Bavaria
+                span.caption__price $ 35 000 
 
 
