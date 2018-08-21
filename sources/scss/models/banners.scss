@@ -8,10 +8,13 @@
   &__item {
     display: block;
     position: relative;
-    background-color: #1d7fe0;
     color: #ffffff;
     text-decoration: none;
     overflow: hidden;
+
+    &:hover {
+      background-color: #1d7fe0;
+    }
 
     img {
       position: relative;

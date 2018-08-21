@@ -2,9 +2,11 @@
 @import 'lib/grid';
 @import 'lib/global';
 
+@import 'plugins/owl.carousel';
 
 
 
 @import 'models/filters';
 @import 'models/banners';
 @import 'models/catalog';
+@import 'models/pagination';
