@@ -206,4 +206,140 @@
 
     }
   }
+
+  &__list {
+    &--item {
+      background: #ffffff;
+      margin: 0 0 15px;
+
+      .item--image {
+        display: block;
+        overflow: hidden;
+
+        img {
+          display: block;
+          margin: 0;
+          width: 100%;
+          transition: .25s linear;
+          transform: scale(1)
+        }
+
+        &:hover {
+          background-color: #1d7fe0;
+
+          img {
+            opacity: 0.5;
+            filter: grayscale(1);
+            transform: scale(1.25)
+          }
+        }
+      }
+
+      .item--body {
+        padding: 30px 30px 30px 0;
+
+        @include mediumDown {
+          padding: 15px 30px 15px 0;
+        }
+
+        @include tabletDown {
+          padding: 15px 30px;
+        }
+
+        @include smallDown {
+          padding: 15px;
+        }
+      }
+
+      .item--header {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        line-height: 1;
+        color: #010101;
+
+        &__title {
+          display: block;
+          flex: 1;
+          margin: 0;
+          padding: 0;
+
+          a {
+            color: #010101;
+            text-decoration: none;
+
+            &:hover {
+              color: #1d7fe0;
+            }
+          }
+        }
+
+        &__price {
+          flex: none;
+          display: block;
+          padding-left: 30px;
+          white-space: nowrap;
+        }
+      }
+
+      .item--info {
+        display: flex;
+        align-items: center;
+        color: #cccccc;
+        line-height: 21px;
+
+        &__adress {
+          font-size: 16px;
+          display: block;
+          flex: 1;
+
+          a {
+            color: #666666;
+            text-decoration: none;
+
+            &:hover {
+              color: #010101;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &__date {
+          display: block;
+          flex: none;
+          white-space: nowrap;
+          font-size: 14px;
+          color: #cccccc;
+          padding-left: 30px;
+        }
+      }
+
+      .item--intro {
+        padding-top: 15px;
+        font-size: 16px;
+        line-height: 21px;
+        max-height: 80px;
+        overflow: hidden;
+
+        p {
+          margin: 0;
+        }
+
+        @include mediumDown {
+          font-size: 14px;
+          padding-top: 5px;
+          max-height: 70px;
+        }
+
+        @include tabletDown {
+          font-size: 16px;
+          max-height: none;
+          padding-top: 15px;
+        }
+        @include smallDown {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
