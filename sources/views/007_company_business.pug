@@ -1,0 +1,48 @@
+extends models/layout
+block content
+  section.company
+    .container
+      include models/breadcrumbs
+      .row
+        .col.lg-9.md-8
+          .company__header
+            .company__header--logo: img(src="img/company-logo.png", alt="")
+            .company__header--info
+              .company--title Offworld Industries Inc.
+              .company--stats
+                .company--stats__item
+                  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                    path(d="M23.9 11.6C23.7 11.2 19.5 3 12 3S.3 11.2.1 11.6v.9C.3 12.8 4.5 21 12 21s11.7-8.2 11.9-8.6c.1-.2.1-.6 0-.8zM12 19c-5.4 0-8.9-5.4-9.9-7C3 10.4 6.6 5 12 5s8.9 5.4 9.9 7c-1 1.6-4.5 7-9.9 7z")
+                    path(d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 6a2 2 0 0 1-2-2c0-1.1.9-2 2-2a2 2 0 0 1 2 2 2 2 0 0 1-2 2z")
+                  span 25
+                .company--stats__item: span На сайте с Jun 18, 2018
+          .company__services
+            .company__services--header Виды услуг
+            .row
+              .col.sm-4
+                ul.company__services--list
+                  li: a(href="") Каршэринг
+                  li: a(href="") Грузоперевозки
+                  li: a(href="") Услуга «Пьяный водитель»
+              .col.sm-4
+                ul.company__services--list
+                  li: a(href="") Каршэринг
+                  li: a(href="") Грузоперевозки
+                  li: a(href="") Услуга «Пьяный водитель»
+              .col.sm-4
+                ul.company__services--list
+                  li: a(href="") Каршэринг
+                  li: a(href="") Грузоперевозки
+                  li: a(href="") Услуга «Пьяный водитель»
+          .company__description
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+          .company__video: .video--wraper: iframe(width="560" height="315" src="https://www.youtube.com/embed/Jr1P4FqSuRs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+          .company__gallery
+            .owl-carousel(data-carousel='gallery')
+              - for(i=1;i<=15;i++)
+                a(data-mfp-src="img/company_slide.png"): img(src="img/company_slide.png", alt="")
+        .col.lg-3.md-4
+          include models/company__panel
+        .col.lg-9.md-8
+          include models/company__comments

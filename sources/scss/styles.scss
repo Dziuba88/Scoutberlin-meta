@@ -3,10 +3,20 @@
 @import 'lib/global';
 
 @import 'plugins/owl.carousel';
+@import 'plugins/slick';
+@import 'plugins/popup';
+@import 'plugins/selectbox';
 
 
 
 @import 'models/filters';
 @import 'models/banners';
-@import 'models/catalog';
+@import 'models/breadcrumbs';
 @import 'models/pagination';
+@import 'models/gallery';
+
+@import 'models/catalog';
+@import 'models/company';
+@import 'models/cabinet';
+@import 'models/profile';
+@import 'models/basket';

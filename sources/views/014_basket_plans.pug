@@ -1,0 +1,46 @@
+extends models/layout
+block content
+  section.basket
+    .container
+      include models/breadcrumbs
+      .basket__header Корзина
+      .row
+        .col.md-6
+          .basket__directory
+            .basket__directory--title Пакет «Стандарт»
+            .basket__directory--period
+              small Период
+              span 12 месяцев
+            .basket__directory--summ
+              small Сумма
+              span 100 €
+          .basket__directory--info
+            .row
+              .col.sm-6
+                ul
+                  li <strong>1200</strong> символов в описании
+                  li Расширенные контакты компании
+                  li Логотип с ссылкой на сайт компании
+                  li Обмен сообщениями
+              .col.sm-6
+                ul
+                  li Статистика
+                  li Управление комментариями
+                  li Раздел услуг
+                  li Баннер на странице справочника
+        .col.md-6
+          .basket__payment
+            .basket__payment--header Выберите метод оплаты
+            .row
+              .col.sm-4: .basket__payment--item
+                input#paypal(type="radio", name="payment")
+                label(for="paypal"): img(src="img/paypal.png", alt="")
+              .col.sm-4: .basket__payment--item
+                input#visa(type="radio", name="payment")
+                label(for="visa"): img(src="img/visa.png", alt="")
+              .col.sm-4: .basket__payment--item
+                input#sofort(type="radio", name="payment")
+                label(for="sofort"): img(src="img/sofort.png", alt="")
+            button.btn.blue()
+              svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
+              span Оплатить

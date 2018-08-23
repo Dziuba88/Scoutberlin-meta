@@ -1,0 +1,84 @@
+extends models/layout
+block content
+  section.cabinet
+    .container
+      include models/breadcrumbs
+      .cabinet__header Пакеты для справочника
+      .row
+        .col.sm-6.md-3
+          .cabinet__price
+            .cabinet__price--body
+              .cabinet__price--title Пакет «Старт»
+              .cabinet__price--value 99 €
+            .cabinet__price--img: img(src="img/plan-1.png", alt="")
+            .cabinet__price--control
+              .selectbox
+                select
+                  option
+                  option(selected="") 1 месяц
+                  option 6 месяцев
+                  option 1 год
+              a(href="").btn.block.white: span Купить
+          .cabinet__price--info: ul
+            li <strong>200</strong> символов в описании
+            li Показывать телефон
+        .col.sm-6.md-3
+          .cabinet__price
+            .cabinet__price--body
+              .cabinet__price--title Пакет «Эконом»
+              .cabinet__price--value 299 €
+            .cabinet__price--img: img(src="img/plan-2.png", alt="")
+            .cabinet__price--control: span.current Мой пакет
+          .cabinet__price--info: ul
+            li <strong>600</strong> символов в описании
+            li Показывать до 3-х телефонов
+            li Логотип компании
+            li Обмен сообщениями
+            li Статистика
+        .col.sm-6.md-3
+          .cabinet__price
+            .cabinet__price--body
+              .cabinet__price--title Пакет «Бизнес»
+              .cabinet__price--value 399 €
+            .cabinet__price--img: img(src="img/plan-3.png", alt="")
+            .cabinet__price--control
+              .selectbox
+                select
+                  option
+                  option(selected="") 1 месяц
+                  option 6 месяцев
+                  option 1 год
+              a(href="").btn.block.white: span Купить
+          .cabinet__price--info: ul
+            li <strong>1200</strong> символов в описании
+            li Расширенные контакты компании
+            li Логотип с ссылкой на сайт компании
+            li Обмен сообщениями
+            li Статистика
+            li Управление комментариями
+            li Раздел услуг
+            li Баннер на странице справочника
+        .col.sm-6.md-3
+          .cabinet__price
+            .cabinet__price--body
+              .cabinet__price--title Пакет «Премиум»
+              .cabinet__price--value 599 €
+            .cabinet__price--img: img(src="img/plan-4.png", alt="")
+            .cabinet__price--control
+              .selectbox
+                select
+                  option
+                  option(selected="") 1 месяц
+                  option 6 месяцев
+                  option 1 год
+              a(href="").btn.block.white: span Купить
+          .cabinet__price--info: ul
+            li <strong>2500</strong> символов в описании
+            li Расширенные контакты компании
+            li Логотип с ссылкой на сайт компании
+            li Обмен сообщениями
+            li Статистика
+            li Управление комментариями
+            li Раздел услуг
+            li Баннер на странице справочника
+            li Баннер на главной

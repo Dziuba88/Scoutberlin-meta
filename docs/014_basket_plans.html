@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Заголовок страницы</title><meta name="description" content="Описание страницы сайта." />
+<meta name="keywords" content="ключевые слова" />
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  </head>
+  <body>
+    <header class="base__header">
+      <h1>
+        <center>HEADER CONTENT</center>
+      </h1>
+      <p>  </p>
+    </header>
+    <main class="base__content">
+      <section class="basket">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="">Scoutberlin</a></li>
+              <li class="dropdown"><a data-toggle="dropdown">Автомобили</a>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li><a class="active" href="">Автомобили</a></li>
+                    <li><a href="">Строительство</a></li>
+                    <li><a href="">Ремонт</a></li>
+                    <li><a href="">Кулинария</a></li>
+                    <li><a href="">Продажи</a></li>
+                    <li><a href="">Туризм</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><span>Hyundai Tucson</span></li>
+            </ul>
+          </div>
+          <div class="basket__header">Корзина</div>
+          <div class="row">
+            <div class="col md-6">
+              <div class="basket__directory">
+                <div class="basket__directory--title">Пакет «Стандарт»</div>
+                <div class="basket__directory--period"><small>Период</small><span>12 месяцев</span></div>
+                <div class="basket__directory--summ"><small>Сумма</small><span>100 €</span></div>
+              </div>
+              <div class="basket__directory--info">
+                <div class="row">
+                  <div class="col sm-6">
+                    <ul>
+                      <li><strong>1200</strong> символов в описании</li>
+                      <li>Расширенные контакты компании</li>
+                      <li>Логотип с ссылкой на сайт компании</li>
+                      <li>Обмен сообщениями</li>
+                    </ul>
+                  </div>
+                  <div class="col sm-6">
+                    <ul>
+                      <li>Статистика</li>
+                      <li>Управление комментариями</li>
+                      <li>Раздел услуг</li>
+                      <li>Баннер на странице справочника</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col md-6">
+              <div class="basket__payment">
+                <div class="basket__payment--header">Выберите метод оплаты</div>
+                <div class="row">
+                  <div class="col sm-4">
+                    <div class="basket__payment--item">
+                      <input id="paypal" type="radio" name="payment"/>
+                      <label for="paypal"><img src="img/paypal.png" alt=""/></label>
+                    </div>
+                  </div>
+                  <div class="col sm-4">
+                    <div class="basket__payment--item">
+                      <input id="visa" type="radio" name="payment"/>
+                      <label for="visa"><img src="img/visa.png" alt=""/></label>
+                    </div>
+                  </div>
+                  <div class="col sm-4">
+                    <div class="basket__payment--item">
+                      <input id="sofort" type="radio" name="payment"/>
+                      <label for="sofort"><img src="img/sofort.png" alt=""/></label>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
+                  </svg><span>Оплатить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="base__footer">
+      <h1>
+        <center>FOOTER CONTENT</center>
+      </h1>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+extends models/layout
+block content
+  section.company
+    .container
+      include models/breadcrumbs
+      .row
+        .col.lg-9.md-8
+          .company__header
+            .company__header--logo: img(src="img/company-logo.png", alt="")
+            .company__header--info
+              .company--title Offworld Industries Inc.
+              .company--stats
+                .company--stats__item
+                  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                    path(d="M23.9 11.6C23.7 11.2 19.5 3 12 3S.3 11.2.1 11.6v.9C.3 12.8 4.5 21 12 21s11.7-8.2 11.9-8.6c.1-.2.1-.6 0-.8zM12 19c-5.4 0-8.9-5.4-9.9-7C3 10.4 6.6 5 12 5s8.9 5.4 9.9 7c-1 1.6-4.5 7-9.9 7z")
+                    path(d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 6a2 2 0 0 1-2-2c0-1.1.9-2 2-2a2 2 0 0 1 2 2 2 2 0 0 1-2 2z")
+                  span 25
+                .company--stats__item: span На сайте с Jun 18, 2018
+            .company__header--controls
+              a(href=""): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M23 9c-.1-.4-.4-.6-.8-.7l-6.4-.9-2.9-5.8c-.3-.7-1.5-.7-1.8 0L8.2 7.3l-6.3 1c-.4 0-.7.3-.9.7-.1.4 0 .8.3 1l4.6 4.5-1.1 6.4c-.1.4.1.8.4 1 .3.2.7.3 1.1.1l5.7-3 5.7 3h.5l.6-.2c.3-.2.5-.6.4-1l-1.1-6.4 4.6-4.5c.3-.2.4-.6.3-.9zm-6.7 4.4l-.3.9.8 4.9-4.4-2.3a.8.8 0 0 0-.9 0l-4.4 2.3.9-4.9-.3-.9L4.1 10 9 9.3c.3 0 .6-.3.8-.5L12 4.3l2.2 4.4c.1.3.4.5.8.5l4.9.7-3.6 3.5z")
+              a(href=""): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20 8h-1V2c0-.6-.4-1-1-1H6c-.6 0-1 .4-1 1v6H4a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3h1v3c0 .6.4 1 1 1h12c.6 0 1-.4 1-1v-3h1a3 3 0 0 0 3-3v-5a3 3 0 0 0-3-3zM7 3h10v5H7V3zm10 18H7v-6h10v6zm4-5c0 .6-.4 1-1 1h-1v-3c0-.6-.4-1-1-1H6c-.6 0-1 .4-1 1v3H4c-.6 0-1-.4-1-1v-5c0-.6.4-1 1-1h16c.6 0 1 .4 1 1v5z")
+              a(data-mfp-src="#report" data-mfp-type="inline"): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                path(d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm0 20c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9z")
+                path(d="M12 11c-.6 0-1 .4-1 1v4c0 .6.4 1 1 1s1-.4 1-1v-4c0-.6-.4-1-1-1zM12.9 7.6l-.1-.2-.1-.1c-.3-.3-.7-.4-1.1-.2l-.3.2-.1.1-.1.2-.1.2V8c0 .3.1.5.3.7l.3.2.4.1h.2l.2-.1.2-.1.1-.1c.2-.2.3-.4.3-.7v-.2l-.1-.2z")
+          .company__services
+            .company__services--header Виды услуг
+            .row
+              .col.sm-4
+                ul.company__services--list
+                  li: a(href="") Каршэринг
+                  li: a(href="") Грузоперевозки
+                  li: a(href="") Услуга «Пьяный водитель»
+              .col.sm-4
+                ul.company__services--list
+                  li: a(href="") Каршэринг
+                  li: a(href="") Грузоперевозки
+                  li: a(href="") Услуга «Пьяный водитель»
+              .col.sm-4
+                ul.company__services--list
+                  li: a(href="") Каршэринг
+                  li: a(href="") Грузоперевозки
+                  li: a(href="") Услуга «Пьяный водитель»
+          .company__description
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+          include models/company__comments
+        .col.lg-3.md-4
+          .company__panel
+            .company__panel--item.controls
+            .company__panel--item.phone
+              .item--label Телефон:
+              span +434 234 XX XX
+              a(href="") Показать
+            .company__panel--item.user
+              .item--label Контактное лицо:
+              span Константин Константинопольский
+            .company__panel--item.adress
+              .item--label Адрес:
+              span Motorstraße 895, 70219 Stuttgart, Germany
+            .map--container: #company_map
