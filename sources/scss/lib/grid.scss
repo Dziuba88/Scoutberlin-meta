@@ -150,6 +150,7 @@ $gutter: 30px !default;
         &.offset-md-#{$i} {margin-left: $perc;}
         $i: $i + 1;
       }
+      &.offset-md-0 {margin-left: 0;}
     }
 
   // LARGE and UP //

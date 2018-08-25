@@ -218,6 +218,27 @@ if($('#profile_map').length) {
   });
 };
 
+if($('#new_map').length) {
+  var new_map = new google.maps.Map(document.getElementById('new_map'), {
+    zoom: 16,
+    center: new google.maps.LatLng(map_location[0], map_location[1]),
+    disableDefaultUI: true
+  });
+  new_map_marker = new google.maps.Marker({
+    position: new google.maps.LatLng(map_location[0], map_location[1]),
+    map: new_map,
+    icon: {
+      url: "img/marker.png",
+      scaledSize: new google.maps.Size(40, 40)
+    }
+  });
+  new_map.addListener('center_changed', function() {
+    window.setTimeout(function() {
+      new_map.panTo(new_map_marker.getPosition());
+    }, 250);
+  });
+};
+
 $('.show__password').click(function () {
   var $inp = $(this).parent('.password').find('input');
 
@@ -229,3 +250,5 @@ $('.show__password').click(function () {
     $inp.attr('type', 'password')
   }
 })
+
+$('.multiselect select').fastselect()

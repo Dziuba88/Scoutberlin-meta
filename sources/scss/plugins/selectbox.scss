@@ -69,16 +69,10 @@
     div {
       cursor: pointer;
       user-select: none;
-      padding: 0 15px;
-      font-size: 12px;
-      line-height: 21px;
-      text-transform: uppercase;
+      padding: 10px 15px;
+      font-size: 16px;
+      line-height: 1;
       color: #666666;
-      margin-bottom: 5px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
 
       &:hover, &.selected {
         color: #1d7fe0;

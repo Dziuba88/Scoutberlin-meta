@@ -284,10 +284,6 @@
     #company_map {
       width: 100%;
       height: 285px;
-  
-      .gmnoprint, .gmnoscreen, img[src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png"] {
-        display: none; 
-      }
     }
 
     @include smallDown {
@@ -575,6 +571,46 @@
           flex: 1;
           padding-left: 15px;
           color: #666666;
+
+          &--edit {
+            text-align: right;
+            padding-top: 15px;
+            margin-bottom: -15px;
+
+            .delete--comment {
+              font-size: 0;
+              line-height: 21px;
+              color: #d8232a;
+              text-decoration: none;
+              white-space: nowrap;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+        
+              &:hover {
+                color: #010101;
+              }
+        
+              svg, span {
+                display: inline-block;
+                line-height: 1;
+                vertical-align: middle;
+              }
+        
+              svg {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                fill: currentColor;
+              }
+        
+              span {
+                font-size: 12px;
+                text-transform: uppercase;
+                padding-top: 2px;
+              }
+            }
+          }
         }
 
         @include smallDown {
