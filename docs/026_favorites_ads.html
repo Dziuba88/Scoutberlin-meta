@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Заголовок страницы</title><meta name="description" content="Описание страницы сайта." />
+<meta name="keywords" content="ключевые слова" />
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  </head>
+  <body>
+    <header class="base__header">
+      <h1>
+        <center>HEADER CONTENT</center>
+      </h1>
+      <p>  </p>
+    </header>
+    <main class="base__content">
+      <section class="favorites">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="">Scoutberlin</a></li>
+              <li class="dropdown"><a data-toggle="dropdown">Автомобили</a>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li><a class="active" href="">Автомобили</a></li>
+                    <li><a href="">Строительство</a></li>
+                    <li><a href="">Ремонт</a></li>
+                    <li><a href="">Кулинария</a></li>
+                    <li><a href="">Продажи</a></li>
+                    <li><a href="">Туризм</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><span>Hyundai Tucson</span></li>
+            </ul>
+          </div>
+          <div class="favorites__header"> <span>Избранные объявления</span>
+            <div class="btn blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21 5h-4V4a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v1H3c-.6 0-1 .4-1 1s.4 1 1 1h1v13a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7h1c.6 0 1-.4 1-1s-.4-1-1-1zM9 4c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v1H9V4zm9 16c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V7h12v13z"></path>
+              </svg><span>Удалить из избранного</span>
+            </div>
+          </div>
+          <div class="favorites__nav">
+            <ul>
+              <li><a class="active" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21 7H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1zM3 9h14c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1zm0 4h18c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1z"></path>
+                  </svg><span>Объявления</span></a></li>
+              <li><a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 5h-8.5L9.8 2.4C9.6 2.2 9.3 2 9 2H4a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm1 14c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1V5c0-.6.4-1 1-1h4.5l1.7 2.6c.2.2.5.4.8.4h9c.6 0 1 .4 1 1v11z"></path>
+                  </svg><span>Компании</span></a></li>
+            </ul>
+          </div>
+          <div class="favorites__ads">
+            <div class="favorites__ads--item">
+              <div class="item__image" data-img="to-bg"><img src="img/gallery-item.jpg" alt=""/>
+                <div class="checkbox">
+                  <input type="checkbox" id="item_1"/>
+                  <label for="item_1"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="item__body">
+                <div class="item__title">Hyundai Tucson</div>
+                <div class="item__region">Bavaria</div>
+                <div class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</div>
+              </div>
+              <div class="item__controls">
+                <div class="item__price"> <small>Цена</small><span>19 999 €</span></div>
+                <div class="item__readmore"><a href=""><span>Подробнее</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="favorites__ads--item">
+              <div class="item__image" data-img="to-bg"><img src="img/gallery-item.jpg" alt=""/>
+                <div class="checkbox">
+                  <input type="checkbox" id="item_2"/>
+                  <label for="item_2"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="item__body">
+                <div class="item__title">Hyundai Tucson</div>
+                <div class="item__region">Bavaria</div>
+                <div class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</div>
+              </div>
+              <div class="item__controls">
+                <div class="item__price"> <small>Цена</small><span>19 999 €</span></div>
+                <div class="item__readmore"><a href=""><span>Подробнее</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="favorites__ads--item">
+              <div class="item__image" data-img="to-bg"><img src="img/gallery-item.jpg" alt=""/>
+                <div class="checkbox">
+                  <input type="checkbox" id="item_3"/>
+                  <label for="item_3"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="item__body">
+                <div class="item__title">Hyundai Tucson</div>
+                <div class="item__region">Bavaria</div>
+                <div class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</div>
+              </div>
+              <div class="item__controls">
+                <div class="item__price"> <small>Цена</small><span>19 999 €</span></div>
+                <div class="item__readmore"><a href=""><span>Подробнее</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="favorites__ads--item">
+              <div class="item__image" data-img="to-bg"><img src="img/gallery-item.jpg" alt=""/>
+                <div class="checkbox">
+                  <input type="checkbox" id="item_4"/>
+                  <label for="item_4"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="item__body">
+                <div class="item__title">Hyundai Tucson</div>
+                <div class="item__region">Bavaria</div>
+                <div class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</div>
+              </div>
+              <div class="item__controls">
+                <div class="item__price"> <small>Цена</small><span>19 999 €</span></div>
+                <div class="item__readmore"><a href=""><span>Подробнее</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <ul>
+              <li><a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 11H7.4l5.3-5.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0l-6.9 6.9c-.2.2-.4.4-.4.8s.2.6.4.8l6.9 6.9c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L7.4 13H19c.6 0 1-.4 1-1s-.4-1-1-1z"></path>
+                  </svg></a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li class="current"><span>3</span></li>
+              <li class="separator"><span>...</span></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z"></path>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="base__footer">
+      <h1>
+        <center>FOOTER CONTENT</center>
+      </h1>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

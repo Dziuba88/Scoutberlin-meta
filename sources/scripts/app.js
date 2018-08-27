@@ -126,7 +126,9 @@ $('[data-mfp-type=inline]').magnificPopup({
   closeBtnInside: true,
   closeMarkup: '<button type="button" title="%title%" class="mfp-close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>',
 });
-
+$('[data-mfp-close]').click(function() {
+  $.magnificPopup.close();
+});
 
 var map_location = [ 48.8956712, 9.1656214 ];
 
@@ -239,6 +241,27 @@ if($('#new_map').length) {
   });
 };
 
+if($('#contact_map').length) {
+  var contact_map = new google.maps.Map(document.getElementById('contact_map'), {
+    zoom: 16,
+    center: new google.maps.LatLng(map_location[0], map_location[1]),
+    disableDefaultUI: true
+  });
+  contact_map_marker = new google.maps.Marker({
+    position: new google.maps.LatLng(map_location[0], map_location[1]),
+    map: contact_map,
+    icon: {
+      url: "img/marker2.png",
+      scaledSize: new google.maps.Size(45, 43)
+    }
+  });
+  contact_map.addListener('center_changed', function() {
+    window.setTimeout(function() {
+      contact_map.panTo(contact_map_marker.getPosition());
+    }, 250);
+  });
+};
+
 $('.show__password').click(function () {
   var $inp = $(this).parent('.password').find('input');
 
@@ -252,3 +275,15 @@ $('.show__password').click(function () {
 })
 
 $('.multiselect select').fastselect()
+
+
+
+$('[data-img=to-bg]').each(function(){
+  var el = $(this);
+  var imageSrc = el.find('img').attr('src');
+  var cssValues = {
+    'background': 'url(' + imageSrc + ') no-repeat center center',
+    'background-size': 'cover'
+  };
+  el.css(cssValues);
+});

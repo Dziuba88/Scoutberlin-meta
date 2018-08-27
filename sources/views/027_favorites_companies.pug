@@ -1,0 +1,67 @@
+extends models/layout
+block content
+  section.favorites
+    .container
+      include models/breadcrumbs
+      .favorites__header 
+        span Избранные объявления
+        .btn.blue
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M21 5h-4V4a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v1H3c-.6 0-1 .4-1 1s.4 1 1 1h1v13a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7h1c.6 0 1-.4 1-1s-.4-1-1-1zM9 4c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v1H9V4zm9 16c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V7h12v13z")
+          span Удалить из избранного
+      .favorites__nav: ul
+        li: a(href="")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+            path(d="M21 7H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1zM3 9h14c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1zm0 4h18c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1z")
+          span Объявления
+        li: a(href="").active
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+            path(d="M20 5h-8.5L9.8 2.4C9.6 2.2 9.3 2 9 2H4a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm1 14c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1V5c0-.6.4-1 1-1h4.5l1.7 2.6c.2.2.5.4.8.4h9c.6 0 1 .4 1 1v11z")
+          span Компании
+      .favorites__companies
+        - for(i=1;i<=4;i++)
+          .favorites__companies--item
+            .item__image
+              .checkbox
+                input(type="checkbox" id='item_'+i)
+                label(for='item_'+i) 
+                  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+              img(src="img/company-logo.png", alt="")
+            .item__body
+              .item__title 
+                span Offworld Industries Inc.
+                small.item__lang
+                  img(src="img/en.png", alt="")
+                  img(src="img/ru.png", alt="")
+                  img(src="img/de.png", alt="")
+              .item__region Bavaria
+              .item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            .item__controls
+              .item__controls--top
+                .item__phone
+                  .item__phone--label Телефон:
+                  span +434 234 XX XX
+                  a(href="") Показать
+                a.btn.blue(data-mfp-src="#message" data-mfp-type="inline")
+                  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M23 1.9l-.1-.3v-.1l-.2-.3-.3-.2h-.1L22 .9V1l-.3.1-20 7c-.4.1-.7.4-.7.9 0 .4.2.8.6 1l8.6 3.8 3.8 8.6c.2.4.5.6.9.6s.8-.3.9-.7l7-20c.2-.1.2-.2.2-.4 0 .1 0 .1 0 0zm-4.8 2.5l-7.4 7.4-6.1-2.7 13.5-4.7zm-3.3 14.9l-2.7-6.1 7.4-7.4-4.7 13.5z")
+                  span Отправить сообщение
+              .item__controls--bottom
+                .item__readmore: a(href="")
+                  span Подробнее
+                  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z")
+      .pagination
+        ul
+          li: a(href='#'): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M19 11H7.4l5.3-5.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0l-6.9 6.9c-.2.2-.4.4-.4.8s.2.6.4.8l6.9 6.9c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L7.4 13H19c.6 0 1-.4 1-1s-.4-1-1-1z")
+          li: a(href='#') 1
+          li: a(href='#') 2
+          li.current: span 3
+          li.separator: span ...
+          li: a(href='#') 7
+          li: a(href='#') 8
+          li: a(href='#') 9
+          li: a(href='#'): svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20 12c0-.4-.2-.6-.4-.8l-6.9-6.9c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.3 5.3H5c-.6 0-1 .4-1 1s.4 1 1 1h11.6l-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.9-6.9c.2-.2.4-.4.4-.8z")
+    #message.mfp-hide.popup__default
+      h3.popup__default--header Сообщение автору объявления
+      textarea(cols="30", rows="10")
+      button.btn.blue
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M23 1.9l-.1-.3v-.1l-.2-.3-.3-.2h-.1L22 .9V1l-.3.1-20 7c-.4.1-.7.4-.7.9 0 .4.2.8.6 1l8.6 3.8 3.8 8.6c.2.4.5.6.9.6s.8-.3.9-.7l7-20c.2-.1.2-.2.2-.4 0 .1 0 .1 0 0zm-4.8 2.5l-7.4 7.4-6.1-2.7 13.5-4.7zm-3.3 14.9l-2.7-6.1 7.4-7.4-4.7 13.5z")
+        span Отправить 

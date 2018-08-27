@@ -32,6 +32,36 @@ p {
   margin: 0 0 21px;
 }
 
+code {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 21px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+
+  pre {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ul, ol {
+  margin: 0 0 21px;
+
+  li {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 a {
   cursor: pointer;
 }
@@ -63,6 +93,7 @@ a {
   vertical-align: middle;
   text-align: center;
   transition: .25s ease-in-out;
+  white-space: nowrap;
 
   &.block {
     display: block;
@@ -109,6 +140,37 @@ a {
 
     &:hover {
       color: #1d7fe0;
+    }
+
+    svg, span {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: currentColor;
+    }
+  }
+
+  &.cancel {
+    color: #666666;
+    background-color:transparent;
+    font-size: 0;
+    line-height: 20px;
+    padding: 20px 40px;
+
+    &:hover {
+      color: #d8232a;
     }
 
     svg, span {
@@ -216,6 +278,12 @@ a {
     text-transform: uppercase;
     color: #010101;
     margin-bottom: 5px;
+
+    small {
+      font-size: 14px;
+      color: #666666;
+      text-transform: lowercase;
+    }
   }
 
   &.password {
@@ -317,4 +385,51 @@ a {
 
 .gmnoprint, .gmnoscreen, img[src^="https://maps.gstatic.com/mapfiles/api-3/images/"] {
   display: none !important;
+}
+
+.textpage {
+  &__header {
+    color: #010101;
+    font-size: 32px;
+    line-height: 1;
+    margin: 0 0 30px;
+  }
+
+  &__body {
+    margin-bottom: 30px;
+
+    &--intro {
+      font-size: 20px;
+      line-height: 27px;
+
+      p {
+        margin: 0 0 24px;
+      }
+    }
+
+    &--left {
+      padding-right: 30px;
+    }
+
+    &--right {
+      padding-left: 30px;
+    }
+
+    @include tabletDown {
+      &--left, &--right {
+        padding: 0;
+      }
+    }
+  }
+
+  &__columns {
+    padding-top: 30px;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+  }
 }

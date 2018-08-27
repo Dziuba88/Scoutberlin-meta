@@ -1,0 +1,9 @@
+section.catalog__viewed
+  .container
+    h2 Ранее просмотренные компании
+    .owl-carousel(data-carousel='viewed')
+      - for(i=1;i<=15;i++)
+        .slide: a(href="").directory__item
+          img.directory__item--image(src="img/company-logo-big.png", alt="")
+          span.directory__item--title Offworld Industries Inc.
+          span.directory__item--adress Bavaria

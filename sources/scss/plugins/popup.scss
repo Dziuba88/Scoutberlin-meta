@@ -7,8 +7,8 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #0b0b0b;
-  opacity: 0.8; }
+  background: #010101;
+  opacity: 0.5; }
 
 .mfp-wrap {
   top: 0;
@@ -382,6 +382,19 @@ img.mfp-img {
     margin-bottom: 15px;
   }
 
+  &--body {
+    padding-top: 10px;
+    margin-bottom: -10px;
+
+    .btn {
+      margin-bottom: 10px;
+    }
+
+  }
+  .btn.blue {
+    padding: 20px 40px;
+  }
+
   textarea {
     display: block;
     width: 100%;
@@ -407,3 +420,4 @@ img.mfp-img {
     }
   }
 }
+

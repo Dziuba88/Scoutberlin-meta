@@ -1,0 +1,24 @@
+extends models/layout
+block content
+  section.faq
+    .container
+      .row
+        .col.md-8.lg-9
+          .faq__header Часто задаваемые вопросы
+          .faq__list: #list-group(role="tablist" aria-multiselectable="true")
+            .panel
+              .panel__header(role="tab" id='faq_header_'+i): a(role="button" data-toggle="collapse" data-parent="#list-group" href='#faq_body_'+i aria-expanded="true" aria-controls='faq_header_'+i) Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              .panel__body.collapse.in(id='faq_body_'+i role="tabpanel" aria-labelledby='faq_header_'+i)
+                .panel__body--text: p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            -for(i=1;i<=5;i++)
+              .panel
+                .panel__header(role="tab" id='faq_header_'+i): a(role="button" data-toggle="collapse" data-parent="#list-group" href='#faq_body_'+i aria-expanded="false" aria-controls='faq_header_'+i).collapsed Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                .panel__body.collapse(id='faq_body_'+i role="tabpanel" aria-labelledby='faq_header_'+i)
+                  .panel__body--text: p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        .col.md-4.lg-3
+          .banner__group
+            a(href="").banner__item
+              img(src="img/banner-1.png", alt="")
+              span.caption
+                span.caption__title Harley Benton
+                span.caption__price $ 35 000 

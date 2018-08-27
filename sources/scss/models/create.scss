@@ -1,4 +1,34 @@
 .create {
+
+  .change__plan {
+    display: block;
+    padding: 22px 20px;
+    border: 1px dashed #cccccc;
+    color: #999999;
+    font-size: 14px;
+    line-height: 20px;
+
+    a {
+      color: #1d7fe0;
+      text-decoration: none;
+
+      &:hover {
+        color: #010101;
+      }
+    }
+
+    strong {
+      font-weight: 400;
+      color: #666666;
+      margin-right: 10px;
+    }
+
+    &.text {
+      border: none;
+      padding: 10px 0 0;
+    }
+  }
+
   &__header {
     color: #010101;
     font-size: 32px;
@@ -158,6 +188,10 @@
       }
 
     }
+
+    .change__plan {
+      text-align: center;
+    }
   }
 
   &__user {
@@ -204,7 +238,7 @@
 
   &__company {
     margin-bottom: 30px;
-
+  
     textarea {
       height: 300px;
     }
@@ -245,6 +279,24 @@
 
         &:hover {
           color: #010101;
+        }
+      }
+
+      .change__plan {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        svg, span {
+          display: block;
+        }
+
+        svg {
+          flex: none;
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+          fill: currentColor;
         }
       }
 
@@ -304,6 +356,11 @@
           }
         }
       }
+
+      .change__plan {
+        text-align: center;
+        margin-top: 10px;
+      }
     }
 
     &--contacts {
@@ -320,6 +377,14 @@
 
         .add__phone {
           padding-top: 35px;
+
+          &.disabled {
+            padding-top: 0;
+          }
+
+          .change__plan {
+            text-align: center;
+          }
         }
 
         .btn.link {
@@ -333,7 +398,12 @@
 
         @include tabletDown {
           .btn.link {padding: 10px 0;}
-          .add__phone {padding-top: 0;margin-top: -25px;margin-bottom: 30px;}
+          .add__phone {
+            padding-top: 0;margin-top: -25px;margin-bottom: 30px;
+            &.disabled {
+              margin-top: 0;
+            }
+          }
         }
       }
       .adress__info {
@@ -351,16 +421,47 @@
       .company__lang {
         margin-bottom: 30px;
       }
+
+      .company__links {
+        .change__plan {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .col:last-child .change__plan {
+          height: 318px;
+          margin-bottom: 30px;
+
+          display: flex;
+          align-items: center;
+
+          span {
+            display: block;
+            width: 100%;
+          }
+
+          @include tabletDown {
+            height: auto;
+            display: block;
+          }
+        }
+      }
+  
     }
 
     &--comments {
       margin-bottom: 30px;
 
-      .company__comments--list .comment:last-child {
+      .company__comments--list .comment.last {
         border-bottom: none;
       }
-    }
 
+      .change__plan {
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 30px;
+      }
+    }
 
 
   }
