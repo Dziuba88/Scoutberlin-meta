@@ -365,6 +365,29 @@
       margin: 0 0 30px;
       font-size: 24px;
     }
+
+    &.top__error {
+      padding-top: 0;
+      margin-top: -58px;
+      margin-bottom: 60px;
+
+      @include tabletDown {
+        margin-top: 0;
+      }
+
+      .catalog__grid--item {
+        margin-bottom: 0;
+      }
+
+      a.btn.link {
+        padding: 15px 0;
+        color: #010101;
+
+        &:hover {
+          color: #1d7fe0
+        }
+      }
+    }
   }
 
   &__vip {

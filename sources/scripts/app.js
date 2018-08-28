@@ -287,3 +287,7 @@ $('[data-img=to-bg]').each(function(){
   };
   el.css(cssValues);
 });
+
+$('[data-sort]').click(function (e) {
+  $(this).toggleClass('invert')
+})
