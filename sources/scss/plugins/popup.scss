@@ -459,7 +459,7 @@ img.mfp-img {
   }
 
   .top__nav {
-    margin: 0 60px 0 0;
+    margin: 0;
     padding: 15px;
     list-style: none;
 
@@ -499,6 +499,12 @@ img.mfp-img {
             color: #010101;
           }
         }
+      }
+
+      .signed {
+        border-top: 1px solid #ccc;
+        margin-top: 15px;
+        padding-top: 15px;
       }
 
     }
