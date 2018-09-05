@@ -421,3 +421,146 @@ img.mfp-img {
   }
 }
 
+.popup__fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-Y: scroll;
+  background-color: #ffffff;
+
+  .mfp-close {
+    display: none;
+  }
+
+  .popup__button {
+    padding: 0 15px;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    color: #101010;
+    cursor: pointer;
+
+    &:hover {
+      color: #ff0000
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      display: block;
+    }
+  }
+
+  .top__nav {
+    margin: 0 60px 0 0;
+    padding: 15px;
+    list-style: none;
+
+    .btn.link {
+      padding: 13px 0;
+      text-align: left;
+      display: block;
+    }
+
+    li.user {
+      padding-top: 13px;
+      .unsigned {
+        color: #1d7fe0;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: uppercase;
+        padding: 13px 0;
+
+        svg {
+          display: block;
+          width: 18px;
+          height: 18px;
+          margin-right: 5px;
+          fill: currentColor;
+        }
+
+        span {
+          color: #cccccc;
+        }
+
+        a {
+          color: currentColor;
+
+          &:hover {
+            color: #010101;
+          }
+        }
+      }
+
+    }
+
+    .dropdown .btn.link {
+      padding-bottom: 0;
+    }
+
+    .dropdown .dropdown-menu {
+      background-color: #efefef;
+    }
+
+    .dropdown .dropdown-backdrop {
+      border-color: transparent transparent #efefef transparent;
+    }
+
+
+
+  }
+
+  .search {
+    margin-bottom: 15px;
+    &__inp {
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 6px;
+      border-bottom: 1px solid #cccccc;
+      margin-bottom: 15px;
+      color: #666666;
+
+      svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        fill: currentColor;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        flex: 1;
+        border: none;
+        height: 60px;
+        color: #101010;
+        font-size: 16px;
+
+        &::-webkit-input-placeholder {color: #eeeeee;}
+        &::-moz-placeholder {color: #eeeeee;font-size: 24px;}
+        &:-ms-input-placeholder {color: #eeeeee;}
+        &:-moz-placeholder {color: #eeeeee;}
+      }
+    }
+
+    &__ctrl {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+  }
+}
+

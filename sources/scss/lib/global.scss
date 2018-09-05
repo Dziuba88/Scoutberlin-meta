@@ -224,6 +224,10 @@ a {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .btn {
@@ -284,7 +288,7 @@ a {
       color: #1d7fe0;
     }
 
-    svg, span {
+    svg, span, strong {
       display: inline-block;
       line-height: 1;
       vertical-align: middle;
@@ -301,6 +305,13 @@ a {
       font-size: 12px;
       text-transform: uppercase;
       color: currentColor;
+    }
+
+    strong {
+      color: #101010;
+      padding-left: 10px;
+      font-size: 16px;
+      font-weight: 400;
     }
   }
   &.cancel {
@@ -661,6 +672,12 @@ a {
     box-shadow: 0 10px 20px rgba(#010101, .2);
     padding: 10px 0;
     display: none;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
     li {
       display: block;

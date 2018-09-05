@@ -291,3 +291,17 @@ $('[data-img=to-bg]').each(function(){
 $('[data-sort]').click(function (e) {
   $(this).toggleClass('invert')
 })
+
+function createSticky(sticky) {
+  if (typeof sticky !== "undefined") {
+    var pos = sticky.offset().top + 90;
+    var win = $(window);
+
+    win.on("scroll", function() {
+      win.scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
+    });
+  }
+};
+
+createSticky($('[data-sticky=top]'));
+

@@ -9,9 +9,7 @@ html(lang="ru")
     <meta name="keywords" content="ключевые слова" />
     link(rel="stylesheet", href="css/styles.min.css")
   body
-    header.base__header
-      h1: center HEADER CONTENT
-      p   
+    include header.unsigned.pug
     main.base__content: block content
     footer.base__footer
       .container
