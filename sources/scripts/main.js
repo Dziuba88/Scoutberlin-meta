@@ -6,3 +6,4 @@
 //@prepros-append plugins/collapse.js
 //@prepros-append plugins/selectbox.js
 //@prepros-append plugins/multiselect.js
+//@prepros-append plugins/scrollbar.js

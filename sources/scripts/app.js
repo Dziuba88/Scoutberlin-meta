@@ -305,3 +305,26 @@ function createSticky(sticky) {
 
 createSticky($('[data-sticky=top]'));
 
+$('[data-scrollbar]').mCustomScrollbar();
+
+
+function fixSidebar(sidebar) {
+  if (typeof sidebar !== "undefined") {
+    $(window).on("scroll", function() {
+      var pos = sidebar.offset().top;
+      var doc = $(window).scrollTop()
+      var scroller = $('[data-scrollbar]')
+      var diff = doc - pos + 90 + 'px'
+      if (doc >= pos) {
+        scroller.css('top', diff)
+      } else {
+        scroller.css('top', 0)
+      }
+  
+    });
+  }
+};
+
+fixSidebar($('[data-sidebar]'))
+
+

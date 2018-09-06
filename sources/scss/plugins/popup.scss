@@ -467,6 +467,12 @@ img.mfp-img {
       padding: 13px 0;
       text-align: left;
       display: block;
+      color: #101010;
+
+      &:hover {
+        color: #666666;
+      }
+
     }
 
     li.user {
