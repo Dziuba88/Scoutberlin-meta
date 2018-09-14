@@ -67,6 +67,23 @@
             border-left: 1px solid #cccccc;
             white-space: nowrap;
 
+            .dropdown {
+              display: inline-block;
+              line-height: 1;
+              vertical-align: middle;
+
+              .dropdown-menu {
+                right: 0;
+                left: auto;
+                min-width: 160px;
+
+                &:before {
+                  right: 15px;
+                  left: auto;
+                }
+              }
+            }
+
             .btn {
               padding: 0;
               margin-left: 15px;
@@ -89,7 +106,7 @@
     .navbar {
       position: static;
       top: -100px;
-      transition: .5s ease-in-out;
+      transition: top .5s ease-in-out;
 
       &__wraper {
         background-color: #ffffff;
@@ -201,8 +218,10 @@
         left: 0;
         right: 0;
         z-index: 99;
+        box-shadow: 0 0 10px rgba(#101010, .2);
+        background-color: #ffffff;
         .navbar__wraper {
-          box-shadow: 0 0 10px rgba(#101010, .2)
+          
         }
         .navbar--brand a img {
           //height: 60px;

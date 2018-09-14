@@ -308,23 +308,36 @@ createSticky($('[data-sticky=top]'));
 $('[data-scrollbar]').mCustomScrollbar();
 
 
-function fixSidebar(sidebar) {
-  if (typeof sidebar !== "undefined") {
-    $(window).on("scroll", function() {
-      var pos = sidebar.offset().top;
-      var doc = $(window).scrollTop()
-      var scroller = $('[data-scrollbar]')
-      var diff = doc - pos + 90 + 'px'
-      if (doc >= pos) {
-        scroller.css('top', diff)
-      } else {
-        scroller.css('top', 0)
-      }
-  
-    });
+if($('[data-sidebar]').length) {
+  function fixSidebar(sidebar) {
+    if (typeof sidebar !== "undefined") {
+      $(window).on("scroll", function() {
+        var pos = sidebar.offset().top;
+        var doc = $(window).scrollTop()
+        var scroller = $('[data-scrollbar]')
+        var diff = doc - pos + 90 + 'px'
+        if (doc >= pos) {
+          scroller.css('top', diff)
+        } else {
+          scroller.css('top', 0)
+        }
+    
+      });
+    }
+  };
+  fixSidebar($('[data-sidebar]'))
+}
+
+if($('[data-autoheight]').length) {
+var textarea = document.querySelector('[data-autoheight]');
+  textarea.addEventListener('keydown', autosize);
+  function autosize(){
+    var el = this;
+    setTimeout(function(){
+      el.style.cssText = 'height:auto;';
+      // for box-sizing other than "content-box" use:
+      // el.style.cssText = '-moz-box-sizing:content-box';
+      el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    },0);
   }
-};
-
-fixSidebar($('[data-sidebar]'))
-
-
+}

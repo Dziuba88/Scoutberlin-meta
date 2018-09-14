@@ -428,7 +428,7 @@
                 <div class="raising__ads--item">
                   <div class="item__value"><span>1</span><small>неделя</small></div>
                   <div class="item__price promo-style"> <span>10 €</span><small>одно объявление</small></div>
-                  <div class="item__controls"><a class="btn block blue" href="">
+                  <div class="item__controls"><a class="btn block blue" data-mfp-src="#buy" data-mfp-type="inline">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
                       </svg><span>Купить</span></a></div>
@@ -447,7 +447,7 @@
                 <div class="raising__ads--item">
                   <div class="item__value"><span>3</span><small>месяцa</small></div>
                   <div class="item__price promo-style"> <span>40 €</span><small>одно объявление</small></div>
-                  <div class="item__controls"><a class="btn block blue" href="">
+                  <div class="item__controls"><a class="btn block blue" data-mfp-src="#buy" data-mfp-type="inline">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
                       </svg><span>Купить</span></a></div>
@@ -457,13 +457,56 @@
                 <div class="raising__ads--item">
                   <div class="item__value"><span>12</span><small>месяцев</small></div>
                   <div class="item__price promo-style"> <span>50 €</span><small>одно объявление</small></div>
-                  <div class="item__controls"><a class="btn block blue" href="">
+                  <div class="item__controls"><a class="btn block blue" data-mfp-src="#buy" data-mfp-type="inline">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
                       </svg><span>Купить</span></a></div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="mfp-hide popup__default" id="buy">
+          <h3 class="popup__default--header">Выберите объявления для продвижения</h3>
+          <div class="popup__default--body">
+            <div class="checkbox">
+              <input id="ad_1" type="checkbox" name="buy" checked="checked"/>
+              <label for="ad_1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg><span>Hyundai tucson</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input id="ad_2" type="checkbox" name="buy"/>
+              <label for="ad_2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg><span>Заголовок объявления</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input id="ad_3" type="checkbox" name="buy"/>
+              <label for="ad_3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg><span>Заголовок объявления</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input id="ad_4" type="checkbox" name="buy"/>
+              <label for="ad_4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg><span>Заголовок объявления</span>
+              </label>
+            </div><br/>
+            <div class="btn blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
+              </svg><span>Купить</span>
+            </div>
+            <div class="btn cancel" data-mfp-close="data-mfp-close"><span>Отмена</span></div>
           </div>
         </div>
       </section>

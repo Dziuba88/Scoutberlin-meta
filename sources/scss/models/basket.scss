@@ -198,22 +198,22 @@
 
       label {
         display: block;
-        border: 2px solid #ffffff;
         cursor: pointer;
         background-color: #ffffff;
-
-        &:hover {
-          border-color: #cccccc;
-        }
 
         img {
           display: block;
           margin: 0 auto;
           max-width: 100%;
+          border: 2px solid #ffffff;
+        }
+
+        &:hover img {
+          border-color: #1d7fe0;
         }
       }
 
-      input:checked + label {
+      input:checked + label img {
         border-color: #1d7fe0;
       }
     }

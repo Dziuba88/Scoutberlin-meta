@@ -22,6 +22,32 @@ block content
             svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
             span Отправлять уведомления о сообщениях на e-mail
       .profile__delete
-        a(href="") 
+        a(data-mfp-src="#report" data-mfp-type="inline")
           svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M21 5h-4V4a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v1H3c-.6 0-1 .4-1 1s.4 1 1 1h1v13a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7h1c.6 0 1-.4 1-1s-.4-1-1-1zM9 4c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v1H9V4zm9 16c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V7h12v13z")
           span Удалить мой профиль
+    #report.mfp-hide.popup__default
+      h3.popup__default--header Удаление профиля
+      .radio
+        input#report_1(type="radio", name="report")
+        label(for="report_1")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Причина 1
+      .radio
+        input#report_2(type="radio", name="report")
+        label(for="report_2")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Причина 2
+      .radio
+        input#report_3(type="radio", name="report")
+        label(for="report_3")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Причина 3
+      .radio
+        input#report_4(type="radio", name="report")
+        label(for="report_4")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Другое
+        textarea(data-autoheight='')
+      button.btn.red
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M21 5h-4V4a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v1H3c-.6 0-1 .4-1 1s.4 1 1 1h1v13a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7h1c.6 0 1-.4 1-1s-.4-1-1-1zM9 4c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v1H9V4zm9 16c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V7h12v13z")
+        span Удалить профиль

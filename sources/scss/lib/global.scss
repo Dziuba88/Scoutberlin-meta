@@ -277,6 +277,41 @@ a {
     }
   }
 
+  &.red {
+    color: #ffffff;
+    background-color: #d8232a;
+    font-size: 0;
+    line-height: 20px;
+    padding: 20px 40px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg, span {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: currentColor;
+    }
+
+    @include smallDown {
+      width: 100%;
+    }
+  }
+
   &.link {
     color: #666666;
     background-color:transparent;
@@ -652,16 +687,9 @@ a {
   position: relative;
 
   .dropdown-backdrop {
-    position: absolute;
-    top: 100%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 5px 6px 5px;
-    border-color: transparent transparent #ffffff transparent;
-    z-index: 66;
-    left: 15px;
+    display: none;
   }
+
   .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -672,19 +700,45 @@ a {
     box-shadow: 0 10px 20px rgba(#010101, .2);
     padding: 10px 0;
     display: none;
+    text-align: left;
 
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -6px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 6px 5px;
+      border-color: transparent transparent #ffffff transparent;
+      z-index: 66;
+      left: 15px;
+    }
+  
     ul {
+      display: block;
       margin: 0;
       padding: 0;
       list-style: none;
+      list-style-image: none;
     }
 
     li {
+      list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
       display: block;
       padding: 0;
       margin: 0;
       &:after {
         display: none;
+      }
+
+      &.separator {
+        border-bottom: 1px solid rgba(#010101, .2);
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 10px;
+        margin-bottom: 15px;
       }
 
       a {
@@ -765,4 +819,22 @@ a {
       }
     }
   }
+}
+
+
+
+
+
+textarea::-webkit-scrollbar {
+    width: 2px;
+}
+ 
+textarea::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: #e6e6e5;
+}
+ 
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #1d7fe0;
 }

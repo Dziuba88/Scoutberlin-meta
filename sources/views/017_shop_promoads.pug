@@ -18,7 +18,7 @@ block content
             .item__price.promo-style 
               span 10 €
               small одно объявление
-            .item__controls: a(href="").btn.block.blue
+            .item__controls: a(data-mfp-src="#buy" data-mfp-type="inline").btn.block.blue
               svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
               span Купить
         .col.sm-6.md-3
@@ -38,7 +38,7 @@ block content
             .item__price.promo-style 
               span 40 €
               small одно объявление
-            .item__controls: a(href="").btn.block.blue
+            .item__controls: a(data-mfp-src="#buy" data-mfp-type="inline").btn.block.blue
               svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
               span Купить
         .col.sm-6.md-3
@@ -49,9 +49,38 @@ block content
             .item__price.promo-style 
               span 50 €
               small одно объявление
-            .item__controls: a(href="").btn.block.blue
+            .item__controls: a(data-mfp-src="#buy" data-mfp-type="inline").btn.block.blue
               svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
               span Купить
+    #buy.mfp-hide.popup__default
+      h3.popup__default--header Выберите объявления для продвижения
+      .popup__default--body
+        .checkbox
+          input#ad_1(type="checkbox", name="buy" checked)
+          label(for="ad_1")
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+            span Hyundai tucson
+        .checkbox
+          input#ad_2(type="checkbox", name="buy")
+          label(for="ad_2")
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+            span Заголовок объявления
+        .checkbox
+          input#ad_3(type="checkbox", name="buy")
+          label(for="ad_3")
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+            span Заголовок объявления
+        .checkbox
+          input#ad_4(type="checkbox", name="buy")
+          label(for="ad_4")
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+            span Заголовок объявления
+        br
+        .btn.blue
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
+          span Купить
+        .btn.cancel(data-mfp-close)
+          span Отмена
 
 
 
