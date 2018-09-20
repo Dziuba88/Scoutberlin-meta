@@ -175,27 +175,87 @@
           }
         }
 
-        &__ctrl ul {
+        &__ctrl {
           display: flex;
           align-items: center;
-          margin: 0;
-          padding: 0;
-          list-style: none;
 
-          li {
-            display: block;
-            flex: none;
+          .selectbox {
 
-            .btn.link {
-              padding: 0 15px;
+            &.ctrl__cat .selectbox--selected {
+              background: url(../img/crud_1.png) no-repeat center left;
             }
 
-            &.ctrl__find .btn.link {
-              color: #1d7fe0;
+            &.ctrl__dist .selectbox--selected {
+              background: url(../img/crud_3.png) no-repeat center left;
+            }
 
-              &:hover {
-                color: #101010;
+            &--selected {
+              padding: 20px 10px 20px 25px;
+              font-size: 12px;
+              text-transform: uppercase;
+              color: rgba(#000000, .8);
+              z-index: 100;
+
+              &:hover, &.active {
+                color: #000000;
               }
+              &:after {
+                display: none;
+              }
+            }
+
+
+            &--items {
+              right: auto;
+              width: auto;
+              height: 120px;
+              overflow-y: auto;
+              overflow-x: hidden;
+              //padding: 0;
+
+              div {
+                white-space: nowrap;
+              }
+
+              &::-webkit-scrollbar {
+                width: 2px;
+              }
+              
+              &::-webkit-scrollbar-track {
+                  border-radius: 2px;
+                  background-color: #e6e6e5;
+              }
+              
+              &::-webkit-scrollbar-thumb {
+                  border-radius: 2px;
+                  background-color: #1d7fe0;
+              }
+            
+            }
+          }
+
+          .ctrl__index {
+            background: url(../img/crud_2.png) no-repeat center left;
+            padding-left: 25px;
+            font-size: 12px !important;
+            text-transform: uppercase;
+            color: rgba(#000000, .8);
+            flex: none;
+            display: block;
+            width: 90px;
+            font-family: 'Futura';
+            font-weight: normal;
+            &::-webkit-input-placeholder {color: rgba(#000000, .8);}
+            &::-moz-placeholder {color: rgba(#000000, .8)}
+            &:-ms-input-placeholder {color: rgba(#000000, .8);}
+            &:-moz-placeholder {color: rgba(#000000, .8);}
+          }
+
+          .ctrl__find .btn.link {
+            color: #1d7fe0;
+
+            &:hover {
+              color: #101010;
             }
           }
         }
@@ -411,3 +471,37 @@
   }
 }
 
+.popup__default .signup.recover {
+  .input__group {
+    margin-bottom: 0;
+  }
+  .row {
+    align-items: flex-start;
+  }
+  .btn.blue.block {
+    margin-top: 26px;
+  }
+}
+
+.message__error {
+  display: block;
+  position: relative;
+  background-color: #d8232a;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 2px 13px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 3px 3px 3px;
+    border-color: transparent transparent #d8232a transparent;
+  }
+}

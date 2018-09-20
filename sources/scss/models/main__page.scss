@@ -107,6 +107,14 @@
         }
       }
     }
+
+    .col.colapsed {
+      display: none;
+    }
+
+    &.break {
+      padding-bottom: 60px;
+    }
   }
 }
 
@@ -143,6 +151,10 @@
           &:hover {
             color: #010101
           }
+        }
+
+        &.colapsed {
+          display: none;
         }
       }
 

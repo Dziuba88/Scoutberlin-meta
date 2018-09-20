@@ -11,6 +11,7 @@ $('[data-carousel=viewed]').owlCarousel({
   }
 });
 
+
 $('[data-carousel=gallery]').owlCarousel({
   nav: true,
   dots: false,
@@ -307,7 +308,6 @@ createSticky($('[data-sticky=top]'));
 
 $('[data-scrollbar]').mCustomScrollbar();
 
-
 if($('[data-sidebar]').length) {
   function fixSidebar(sidebar) {
     if (typeof sidebar !== "undefined") {
@@ -326,7 +326,7 @@ if($('[data-sidebar]').length) {
     }
   };
   fixSidebar($('[data-sidebar]'))
-}
+};
 
 if($('[data-autoheight]').length) {
 var textarea = document.querySelector('[data-autoheight]');
@@ -340,4 +340,47 @@ var textarea = document.querySelector('[data-autoheight]');
       el.style.cssText = 'height:' + el.scrollHeight + 'px';
     },0);
   }
-}
+};
+
+$('[data-break=categories]').click(function () {
+  $('.main__page--categories').addClass('break');
+  $('.main__page--categories .col.disabled__mobile').hide();
+  $('.main__page--categories .col.colapsed').show();
+});
+
+$('[data-break=directories]').click(function () {
+  $(this).hide();
+  $('.directories__menu ul li.colapsed').show();
+});
+
+$('.cookies__alert--button .btn.blue').click(function () {
+  $('.cookies__alert').hide();
+});
+
+if($('#map_view').length) {
+  var locations = [
+    {x: 48.8936712, y: 9.1726214},
+    {x: 48.8956712, y: 9.1636214},
+    {x: 48.8976712, y: 9.1666214},
+    {x: 48.8996712, y: 9.1696214},
+    {x: 48.9016712, y: 9.1606214}
+  ];
+
+  var map_view = new google.maps.Map(document.getElementById('map_view'), {
+    zoom: 16,
+    center: new google.maps.LatLng(48.8976712, 9.1656214),
+    disableDefaultUI: true
+  });
+
+  for (i = 0; i < locations.length; i++) {
+    map_view_marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i].x, locations[i].y),
+      map: map_view,
+      icon: {
+        url: "img/marker.png",
+        scaledSize: new google.maps.Size(40, 40)
+      }
+    });
+  }
+
+};

@@ -2,13 +2,13 @@
   .fstElement {
     position: relative;
     width: 100%;
-    background-color: #ffffff;
+    background: #ffffff url(../img/fstControls.png) no-repeat right top;
 
     select {
       display: none;
     }
 
-    &:after {
+    /*&:after {
       width: 8px;
       height: 8px;
       border: 1px solid transparent;
@@ -21,13 +21,10 @@
       right: 15px;
       margin-top: -4px;
       transform-origin: center center;
-    }
+    }*/
 
-    &.fstResultsOpened:after {
-      border-color: transparent;
-      border-right-color: #666666;
-      border-top-color:#666666;
-      margin-top: 0;
+    &.fstActive {
+      background: #ffffff url(../img/fstControls.png) no-repeat right bottom;
     }
 
 
@@ -137,7 +134,7 @@
 
     }
 
-    &.fstResultsOpened .fstResults {
+    &.fstActive .fstResults {
       display: block;
     }
 
