@@ -410,6 +410,7 @@
           display: none;
           &.status {
             display: block;
+            width: 90px;
           }
         }
       }
@@ -551,6 +552,11 @@
             right: 0;
             box-shadow: 0 0 10px rgba(#010101, 0.1);
             padding: 0;
+
+            &:before {
+              left: auto;
+              right: 15px;
+            }
 
             ul {
               margin: 0;
@@ -911,6 +917,11 @@
           box-shadow: 0 0 10px rgba(#010101, 0.1);
           padding: 0;
 
+          &:before {
+            left: auto;
+            right: 15px;
+          }
+
           ul {
             margin: 0;
             padding: 0;
@@ -1020,22 +1031,23 @@
       &--header {
         padding: 0 0 10px;
         .column, {
-          &.created, &.title {
+          &.created, &.title, &.status {
             display: none;
           }
-          &.status {
+          /*&.status {
             padding-left: 0;
             flex: none;
-          }
+          }*/
           &.controls {
             flex: 1;
-            padding-left: 20px;
+            padding-left: 0;
             text-align: right;
 
             .btn {
               padding: 10px 20px;
               position: static;
               margin: 0;
+              width: 100%;
             }
           }
         }

@@ -2,7 +2,7 @@
   .fstElement {
     position: relative;
     width: 100%;
-    background: #ffffff url(../img/fstControls.png) no-repeat right top;
+    background: #ffffff url(../img/fstControls_h.png) no-repeat right center;
 
     select {
       display: none;
@@ -24,7 +24,7 @@
     }*/
 
     &.fstActive {
-      background: #ffffff url(../img/fstControls.png) no-repeat right bottom;
+      background: #ffffff url(../img/fstControls_o.png) no-repeat right center;
     }
 
 

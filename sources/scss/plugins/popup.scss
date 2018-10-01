@@ -363,7 +363,7 @@ img.mfp-img {
   margin: 60px auto;
 
   @include smallDown {
-    padding: 30px 15px;
+    padding: 40px 15px 30px;
     margin: 30px auto;
   }
 
@@ -524,6 +524,13 @@ img.mfp-img {
     .dropdown .dropdown-menu {
       position: static;
       box-shadow: none !important;
+      padding-top: 0;
+
+      &::before {display: none;}
+
+      li a {
+        padding: 5px 0 5px 21px;
+      }
     }
 
     .dropdown .dropdown-backdrop {
@@ -608,6 +615,13 @@ img.mfp-img {
           overflow-x: hidden;
           box-shadow: none;
           margin: 0 0 10px;
+          padding: 0;
+
+          div {
+            font-size: 12px;
+            text-transform: uppercase;
+            padding-left: 26px;
+          }
 
           &::-webkit-scrollbar {
             width: 2px;

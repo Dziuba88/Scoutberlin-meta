@@ -79,8 +79,13 @@
     @include tabletDown {
       display: block;
 
+      &--map {
+        flex: none;
+      }
+
       &--text {
         padding: 15px 0;
+        width: 100%;
       }
     }
 

@@ -504,6 +504,10 @@
         line-height: 21px;
         color: #010101;
 
+        &:last-child {
+          border-bottom: none;
+        }
+
         &__header {
           flex: none;
           width: 33.333333333%;

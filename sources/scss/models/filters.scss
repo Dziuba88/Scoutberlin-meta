@@ -34,6 +34,13 @@
             color: #1d7fe0;
           }
         }
+
+        &.parent ul.child {
+          font-size: 14px;
+          //text-transform: uppercase;
+          padding-left: 15px;
+          padding-top: 5px;
+        }
       }
     }
 

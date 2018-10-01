@@ -2,7 +2,13 @@
   .catalog__filter--block
     h4 Категории
     ul
-      li: a(href="").active Авто
+      li.parent
+        a(href="").active Авто
+        ul.child
+          li: a(href="") Суперкары
+          li: a(href="") Внедорожники
+          li: a(href="") Легковые
+          li: a(href="") Грузовики
       li: a(href="") Одежда
       li: a(href="") Товары для дома
       li: a(href="") Недвижимость
