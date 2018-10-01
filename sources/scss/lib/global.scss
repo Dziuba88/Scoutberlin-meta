@@ -144,10 +144,6 @@ a {
             }
           }
         }
-
-        @include mediumDown {
-          display: none;
-        }
       }
 
       .footer__copyright {
@@ -213,6 +209,51 @@ a {
           }
         }
       }
+
+      
+      @include mediumDown {
+        height: auto;
+        flex-wrap: wrap;
+
+        .footer__logo {
+          order: 1;
+        }
+        .footer__copyright {
+          order: 2;
+          line-height: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .footer__social {
+          order: 3;
+        }
+        .footer__nav {
+          order: none;
+          width: 100%;
+          flex: none;
+          border-bottom: 1px solid #f2f2f1;
+          padding: 0 15px;
+
+          ul {
+            justify-content: center;
+            padding: 10px 0;
+
+            li {
+              padding: 0 10px;
+
+              a {
+                padding: 10px;
+              }
+            }
+
+            @include tabletDown {
+              display: block;
+              text-align: center;
+            } 
+          }
+        }
+      }
+
     }
   }
 }
