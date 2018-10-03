@@ -266,7 +266,7 @@ block content
                 label Интервал
                 .selectbox
                   select
-                    option
+                    option(label="not selected")
                     option Каждые 12 часов
                     option(selected="") Каждые 24 часа
                     option Каждые 48 часов
@@ -313,7 +313,7 @@ block content
                 label Начиная с
                 .selectbox.totop
                   select
-                    option
+                    option(label="not selected")
                     -for(i=0;i<=7;i++)
                       option= '0'+i+':00'
                     option(selected="") 08:00
@@ -324,7 +324,7 @@ block content
                 label до
                 .selectbox.totop
                   select
-                    option
+                    option(label="not selected")
                     -for(i=0;i<=7;i++)
                       option= '0'+i+':00'
                     option(selected="") 08:00

@@ -239,16 +239,21 @@
             padding-left: 25px;
             font-size: 12px !important;
             text-transform: uppercase;
-            color: rgba(#000000, .8);
+            color: #010101;
             flex: none;
             display: block;
             width: 90px;
             font-family: 'Futura';
             font-weight: normal;
-            &::-webkit-input-placeholder {color: rgba(#000000, .8);}
-            &::-moz-placeholder {color: rgba(#000000, .8)}
-            &:-ms-input-placeholder {color: rgba(#000000, .8);}
-            &:-moz-placeholder {color: rgba(#000000, .8);}
+            &::-webkit-input-placeholder {color: rgba(#000000, .8);font-size: 12px;}
+            &::-moz-placeholder {color: rgba(#000000, .8);font-size: 12px;}
+            &:-ms-input-placeholder {color: rgba(#000000, .8);font-size: 12px;}
+            &:-moz-placeholder {color: rgba(#000000, .8);font-size: 12px;}
+
+            &:hover::-webkit-input-placeholder {color: #010101}
+            &:hover::-moz-placeholder {color: #010101}
+            &:hover:-ms-input-placeholder {color: #010101}
+            &:hover:-moz-placeholder {color: #010101}
           }
 
           .ctrl__find .btn.link {
