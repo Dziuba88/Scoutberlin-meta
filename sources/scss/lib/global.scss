@@ -250,17 +250,22 @@ a {
             }
 
             @include tabletDown {
-              display: block;
-              //text-align: center;
-
+              flex-wrap: wrap;
               li {
                 padding: 0;
+                width: 33.333333333%;
 
                 a {
                   padding: 10px 0;
                 }
               }
             } 
+            @include smallDown {
+              display: block;
+              li {
+                width: 100%;
+              }
+            }
           }
         }
       }
