@@ -1,6 +1,6 @@
 extends models/layout2
 block content
-  section.profile
+  .profile
     .container
       include models/breadcrumbs
       .profile__header Мой профиль
@@ -59,7 +59,7 @@ block content
                   line(x1="18" y1="6" x2="6" y2="18")
                   line(x1="6" y1="6" x2="18" y2="18")
           .photo-thumb
-            input#upload_photo(type="file", name="")
+            input#upload_photo(type="file", name="upload_photo")
             label(for="upload_photo"): img(src="img/no-avatar.png", alt="")
       .profile__password
         h3 Смена пароля
