@@ -4,7 +4,7 @@
     .owl-carousel(data-carousel='viewed')
       - for(i=1;i<=15;i++)
         .slide: a(href="").catalog__grid--item
-          .image: img(src="img/catalog-item.png", alt="")
+          .image(data-img="to-bg"): img(src="img/catalog-item.png", alt="")
           span.caption
             span.caption__title Harley Benton
             span.caption__info

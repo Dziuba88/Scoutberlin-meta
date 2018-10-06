@@ -24,7 +24,7 @@
       }
 
       &:hover .image {
-        background-color: #1d7fe0;
+        //background-color: #1d7fe0;
       }
 
       img {
@@ -33,9 +33,9 @@
         transition: .25s linear;
       }
       &:hover img {
-        opacity: 0.5;
-        filter: grayscale(1);
-        transform: scale(1.25)
+        //opacity: 0.5;
+        //filter: grayscale(1);
+        //transform: scale(1.25)
       }
 
       .caption {
@@ -172,9 +172,9 @@
         transform: scale(1)
       }
       &:hover img {
-        opacity: 0.5 !important;
-        filter: grayscale(1);
-        transform: scale(1.25)
+        //opacity: 0.5 !important;
+        //filter: grayscale(1);
+        //transform: scale(1.25)
       }
 
       .caption {
@@ -382,6 +382,14 @@
       font-size: 24px;
     }
 
+    .catalog__grid--item .image {
+      padding-top: 75%;
+
+      img {
+        display: none;
+      }
+    }
+
     .catalog__grid--item .caption__price {
       padding-left: 0;
       padding-top: 5px;
@@ -406,6 +414,37 @@
 
         &:hover {
           color: #1d7fe0
+        }
+      }
+    }
+
+    // Сука блядь ебаный дизайнер что первый что второй
+    @include smallDown {
+      background-color: #ffffff;
+      padding-top: 20px;
+      margin-bottom: 30px;
+
+      &.top__error {
+        margin-bottom: 30px;
+        padding-top: 30px;
+      }
+      [data-carousel=viewed]:after {
+        background-color: #ffffff;
+      }
+
+      .catalog__grid--item .image {
+        padding-top: 125%;
+      }
+
+      .catalog__grid--item .caption {
+        position: absolute;
+        background-color: transparent;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .caption__title, .caption__price {
+          color: #ffffff;
+          opacity: 1;
         }
       }
     }

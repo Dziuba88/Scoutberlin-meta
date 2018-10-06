@@ -31,6 +31,9 @@
         line-height: 1;
       }
     }
+    @include smallDown {
+      margin-bottom: 0px;
+    }
   }
 
   &__list {

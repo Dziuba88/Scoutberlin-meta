@@ -67,7 +67,10 @@ a {
   }
 
   &__footer {
-    padding-top: 30px;
+    margin-top: 30px;
+    @include mediumDown {
+      background-color: #ffffff;
+    }
     &--wraper {
       display: flex;
       align-items: center;
@@ -170,7 +173,7 @@ a {
       .footer__social {
         display: block;
         flex: none;
-        padding-right: 15px;
+        //padding-right: 15px;
 
         ul {
           font-size: 0;
@@ -215,11 +218,12 @@ a {
 
       
       @include mediumDown {
-        height: auto;
-        flex-wrap: wrap;
+        //height: auto;
+        //flex-wrap: wrap;
 
         .footer__logo {
           order: 1;
+          display: none;
         }
         .footer__copyright {
           order: 2;
@@ -231,6 +235,7 @@ a {
           order: 3;
         }
         .footer__nav {
+          display: none;
           order: none;
           width: 100%;
           flex: none;
@@ -723,18 +728,54 @@ a {
   &--right {
     padding-left: 30px;
   }
+
+  [data-kostyli] {
+    display: none;
+    color: #000000;
+    padding: 0px 0;
+
+    &:hover {
+      color: #1d7fe0;
+    }
+
+    span, svg {
+      fill: currentColor;
+      color: currentColor
+    }
+  }
+
+  .kostyli {
+    display: block;
+  }
+
+  p {line-height: 19px;}
+
   @include tabletDown {
+    padding-top: 0;
     &--left, &--right {
       padding: 0;
+    }
+    [data-kostyli] {
+      display: inline-block;
+    }
+    .kostyli {
+      display: none;
+
+      &.show {
+        display: block;
+      }
     }
   }
 
   &--intro {
-    font-size: 20px;
-    line-height: 27px;
 
     p {
       margin: 0 0 24px;
+      font-size: 20px;
+      line-height: 24px;
+      @include tabletDown {
+        font-size: 18px;
+      }
     }
   }
 }
