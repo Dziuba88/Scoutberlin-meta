@@ -524,25 +524,112 @@ img.mfp-img {
     .dropdown .btn.link {
       padding-bottom: 0;
     }
+    .dropdown.open .btn.link, .dropdown .btn.link:hover {
+      color: #1d7fe0;
+    }
+
+    .dropdown {
+      width: 100%;
+      display: block;
+    }
 
     .dropdown .dropdown-menu {
-      position: static;
-      box-shadow: none !important;
-      padding-top: 0;
-
-      &::before {display: none;}
+      box-shadow: 0 5px 20px rgba(1, 1, 1, 0.2);
+      width: 100%;
 
       li a {
         padding: 5px 0 5px 21px;
+
+        color: #666666;
+
+        &:hover {
+          color: #1d7fe0;
+        }
       }
     }
 
     .dropdown .dropdown-backdrop {
-      border-color: transparent transparent #efefef transparent;
+      display: none;
+    }
+
+    ul.user__menu {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      padding: 0 20px;
+
+      li {
+        display: block;
+        width: 50%;
+        flex: none;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        &.separator {
+          padding-top: 5px;
+          margin-bottom: 20px;
+        }
+
+        &.separator, &:last-child {
+          width: 100%;
+        }
+
+        a {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
     }
 
 
 
+  }
+
+  .popup__footer {
+    padding: 30px 15px 0;
+    ul, ul li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      list-style-image: none;
+    }
+    ul {
+      border-top: 1px solid #ccc;
+      padding-top: 30px;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      li {
+        display: block;
+        width: 50%;
+        font-size: 12px;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        &:nth-child(odd) {
+          padding-right: 15px;
+        }
+
+        &:nth-child(even) {
+          padding-left: 15px;
+        }
+
+        a {
+          display: block;
+          color: #000;
+          text-decoration: none;
+          margin-bottom: 30px;
+
+          &:hover {
+            color: #1d7fe0;
+          }
+        }
+      }
+
+    }
   }
 
   .search {

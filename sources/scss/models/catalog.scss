@@ -423,10 +423,15 @@
       background-color: #ffffff;
       padding-top: 20px;
       margin-bottom: 30px;
+      
 
       &.top__error {
         margin-bottom: 30px;
         padding-top: 30px;
+        margin-top: -30px;
+        a.btn.link {
+          padding: 20px 0;
+        }
       }
       [data-carousel=viewed]:after {
         background-color: #ffffff;
