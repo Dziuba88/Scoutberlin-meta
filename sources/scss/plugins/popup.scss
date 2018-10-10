@@ -604,18 +604,15 @@ img.mfp-img {
 
       li {
         display: block;
-        width: 50%;
+        width: 33.3333333333333%;
         font-size: 12px;
         line-height: 1.2;
         text-transform: uppercase;
 
-        &:nth-child(odd) {
-          padding-right: 15px;
+        @include smallDown {
+          width: 100%;
         }
 
-        &:nth-child(even) {
-          padding-left: 15px;
-        }
 
         a {
           display: block;
