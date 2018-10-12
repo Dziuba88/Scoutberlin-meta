@@ -12,6 +12,10 @@
       padding: 20px 0 20px 40px;
       border-bottom: 1px solid #cccccc;
 
+      &:last-child {
+        border-bottom: 0;
+      }
+
       @include smallDown {
         padding-left: 20px;
       }
