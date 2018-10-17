@@ -3,12 +3,8 @@
 function createSticky(sticky) {
   if (typeof sticky !== "undefined") {
     var pos = sticky.offset().top;
-
-    console.log(pos)
-    console.log($(window))
     $('body').on("scroll", function () {
       $('body').scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
-      console.log(1)
     });
   }
 };
