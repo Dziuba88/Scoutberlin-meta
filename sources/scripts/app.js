@@ -1,3 +1,21 @@
+
+
+function createSticky(sticky) {
+  if (typeof sticky !== "undefined") {
+    var pos = sticky.offset().top;
+
+    console.log(pos)
+    console.log($(window))
+    $('body').on("scroll", function () {
+      $('body').scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
+      console.log(1)
+    });
+  }
+};
+
+
+createSticky($(".navbar"));
+
 $('[data-carousel=viewed]').owlCarousel({
   autoWidth: true,
   dots: false,
@@ -293,19 +311,6 @@ $('[data-img=to-bg]').each(function () {
 $('[data-sort]').click(function (e) {
   $(this).toggleClass('invert')
 })
-
-function createSticky(sticky) {
-  if (typeof sticky !== "undefined") {
-    var pos = sticky.offset().top + 90;
-    var win = $(window);
-
-    win.on("scroll", function () {
-      win.scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
-    });
-  }
-};
-
-createSticky($('[data-sticky=top]'));
 
 $('[data-scrollbar]').mCustomScrollbar();
 
