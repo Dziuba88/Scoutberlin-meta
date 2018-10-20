@@ -52,6 +52,10 @@
       left: 15px;
     }
 
+    @include smallDown {
+      padding: 10px 15px;
+    }
+
 
 
   }

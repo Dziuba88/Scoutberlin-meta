@@ -350,7 +350,7 @@ MagnificPopup.prototype = {
 		_mfpTrigger('BuildControls');
 
 		// remove scrollbar, add margin e.t.c
-		$('html').css(windowStyles);
+		$('html').css(windowStyles); $('body').css(windowStyles);
 		
 		// add everything to DOM
 		mfp.bgOverlay.add(mfp.wrap).prependTo( mfp.st.prependTo || $(document.body) );
@@ -425,7 +425,7 @@ MagnificPopup.prototype = {
 			} else {
 				windowStyles.overflow = '';
 			}
-			$('html').css(windowStyles);
+			$('html').css(windowStyles); $('body').css(windowStyles);
 		}
 		
 		_document.off('keyup' + EVENT_NS + ' focusin' + EVENT_NS);

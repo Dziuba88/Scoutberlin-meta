@@ -86,9 +86,39 @@
       }
     }
   }
+
+  @include smallDown {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
 }
 
+[data-filters="catalog"] {
+  display: none;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f1;
+  font-size: 12px;
+  color: #666666;
+  text-transform: uppercase;
+  line-height: 20px;
+  padding: 10px;
 
+  &.active {
+    background: #1d7fe0;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  @include smallDown {
+    display: block;
+  }
+}
 
 .checkbox {
   margin-bottom: 10px;

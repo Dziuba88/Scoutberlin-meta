@@ -8,7 +8,9 @@
 html, body {
   overflow-x: hidden !important;
 }
-
+html {
+  margin: 0 !important;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -71,7 +73,7 @@ a {
   }
 
   &__footer {
-    margin-top: 30px;
+    margin-top: 0px;
     @include mediumDown {
       background-color: #ffffff;
     }
@@ -594,6 +596,20 @@ a {
   
   }
 
+  @include smallDown {
+    margin-bottom: 20px;
+
+    input {
+      height: 40px;
+      padding: 0 15px;
+    }
+
+    &.password .show__password {
+      right: 5px;
+      bottom: 5px;
+    }
+  }
+
 }
 
 
@@ -708,6 +724,7 @@ a {
 
 .about__site {
   padding-top: 30px;
+  margin-bottom: 30px;
 
   &--title {
     font-size: 24px;
@@ -930,4 +947,16 @@ textarea::-webkit-scrollbar-track {
 textarea::-webkit-scrollbar-thumb {
     border-radius: 2px;
     background-color: #1d7fe0;
+}
+.fordesigners {
+  display: none;
+  @include smallDown {
+    display: block;
+  }
+}
+.fordesigners2 {
+  display: block;
+  @include smallDown {
+    display: none;
+  }
 }

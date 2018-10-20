@@ -33,6 +33,30 @@
     }
     @include smallDown {
       margin-bottom: 0px;
+
+      // Когда дизайнер уебан...
+      .col.lg-8.md-7 {
+        padding: 0 10px;
+
+        .row {
+          margin: 0;
+          .col.sm-4 {
+                flex-basis: 50%;
+                max-width: 50%;
+                padding: 0 5px;
+                margin-bottom: 10px;
+
+                .directory__intro--item {
+                  margin-bottom: 0;
+                  height: 100%;
+
+                  span {
+                    white-space: normal;
+                  }
+                }
+          }
+        }
+      }
     }
   }
 

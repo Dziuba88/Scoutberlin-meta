@@ -93,10 +93,12 @@
             <div class="navbar__wraper">
               <div class="navbar--brand"><a href=""><img src="img/logo.png" alt=""/></a></div>
               <div class="navbar--search">
-                <svg class="label" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M21.7 20.3l-3.7-3.7c1.2-1.5 2-3.5 2-5.6 0-5-4-9-9-9s-9 4-9 9c0 5 4 9 9 9 2.1 0 4.1-0.7 5.6-2l3.7 3.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4zM4 11c0-3.9 3.1-7 7-7s7 3.1 7 7c0 1.9-0.8 3.7-2 4.9 0 0 0 0 0 0s0 0 0 0c-1.3 1.3-3 2-4.9 2-4 0.1-7.1-3-7.1-6.9z"></path>
-                </svg>
-                <input type="search" placeholder="Найти в 26 356 объявлениях"/>
+                <label for="crudsearch">
+                  <svg class="label" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21.7 20.3l-3.7-3.7c1.2-1.5 2-3.5 2-5.6 0-5-4-9-9-9s-9 4-9 9c0 5 4 9 9 9 2.1 0 4.1-0.7 5.6-2l3.7 3.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4zM4 11c0-3.9 3.1-7 7-7s7 3.1 7 7c0 1.9-0.8 3.7-2 4.9 0 0 0 0 0 0s0 0 0 0c-1.3 1.3-3 2-4.9 2-4 0.1-7.1-3-7.1-6.9z"></path>
+                  </svg>
+                </label>
+                <input type="search" placeholder="Найти в 26 356 объявлениях" id="crudsearch"/>
                 <div class="navbar--search__ctrl">
                   <div class="selectbox ctrl__cat">
                     <select>
@@ -181,10 +183,12 @@
       </div>
       <div class="search">
         <div class="search__inp">
-          <svg class="label" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M21.7 20.3l-3.7-3.7c1.2-1.5 2-3.5 2-5.6 0-5-4-9-9-9s-9 4-9 9c0 5 4 9 9 9 2.1 0 4.1-0.7 5.6-2l3.7 3.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4zM4 11c0-3.9 3.1-7 7-7s7 3.1 7 7c0 1.9-0.8 3.7-2 4.9 0 0 0 0 0 0s0 0 0 0c-1.3 1.3-3 2-4.9 2-4 0.1-7.1-3-7.1-6.9z"></path>
-          </svg>
-          <input type="search" placeholder="Поиск"/>
+          <label for="crudsearchmobile">
+            <svg class="label" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M21.7 20.3l-3.7-3.7c1.2-1.5 2-3.5 2-5.6 0-5-4-9-9-9s-9 4-9 9c0 5 4 9 9 9 2.1 0 4.1-0.7 5.6-2l3.7 3.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4zM4 11c0-3.9 3.1-7 7-7s7 3.1 7 7c0 1.9-0.8 3.7-2 4.9 0 0 0 0 0 0s0 0 0 0c-1.3 1.3-3 2-4.9 2-4 0.1-7.1-3-7.1-6.9z"></path>
+            </svg>
+          </label>
+          <input type="search" placeholder="Поиск" id="crudsearchmobile"/>
         </div>
         <div class="search__ctrl">
           <div class="selectbox ctrl__cat">
@@ -326,114 +330,117 @@
         <div class="container">
           <div class="row">
             <div class="col lg-3 md-4">
-              <div class="catalog__filter">
-                <div class="catalog__filter--block">
-                  <h4>Категории</h4>
-                  <ul>
-                    <li class="parent"><a class="active" href="">Авто</a>
-                      <ul class="child">
-                        <li><a href="">Суперкары</a></li>
-                        <li><a href="">Внедорожники</a></li>
-                        <li><a href="">Легковые</a></li>
-                        <li><a href="">Грузовики</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="">Одежда</a></li>
-                    <li><a href="">Товары для дома</a></li>
-                    <li><a href="">Недвижимость</a></li>
-                    <li><a href="">Знакомства</a></li>
-                  </ul>
-                </div>
-                <div class="catalog__filter--block">
-                  <h4>Цена</h4>
-                  <div class="inline_inputs">
-                    <input type="text" placeholder="от"/>
-                    <input type="text" placeholder="до"/>
+              <div class="filters__wraper">
+                <button data-filters="catalog">показать/скрыть фильтры</button>
+                <div class="catalog__filter">
+                  <div class="catalog__filter--block">
+                    <h4>Категории</h4>
+                    <ul>
+                      <li class="parent"><a class="active" href="">Авто</a>
+                        <ul class="child">
+                          <li><a href="">Суперкары</a></li>
+                          <li><a href="">Внедорожники</a></li>
+                          <li><a href="">Легковые</a></li>
+                          <li><a href="">Грузовики</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Одежда</a></li>
+                      <li><a href="">Товары для дома</a></li>
+                      <li><a href="">Недвижимость</a></li>
+                      <li><a href="">Знакомства</a></li>
+                    </ul>
                   </div>
-                </div>
-                <div class="catalog__filter--block">
-                  <h4>Тип предложения</h4>
-                  <div class="checkbox">
-                    <input id="offer_sell" type="checkbox"/>
-                    <label for="offer_sell"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span>Куплю</span>
-                    </label>
+                  <div class="catalog__filter--block">
+                    <h4>Цена</h4>
+                    <div class="inline_inputs">
+                      <input type="text" placeholder="от"/>
+                      <input type="text" placeholder="до"/>
+                    </div>
                   </div>
-                  <div class="checkbox">
-                    <input id="offer_buy" type="checkbox"/>
-                    <label for="offer_buy"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span>Продам</span>
-                    </label>
+                  <div class="catalog__filter--block">
+                    <h4>Тип предложения</h4>
+                    <div class="checkbox">
+                      <input id="offer_sell" type="checkbox"/>
+                      <label for="offer_sell"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Куплю</span>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="offer_buy" type="checkbox"/>
+                      <label for="offer_buy"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Продам</span>
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="catalog__filter--block">
-                  <h4>Тип объявления</h4>
-                  <div class="checkbox">
-                    <input id="add_private" type="checkbox"/>
-                    <label for="add_private"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span>Частное</span>
-                    </label>
+                  <div class="catalog__filter--block">
+                    <h4>Тип объявления</h4>
+                    <div class="checkbox">
+                      <input id="add_private" type="checkbox"/>
+                      <label for="add_private"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Частное</span>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="offer_commerce" type="checkbox"/>
+                      <label for="offer_commerce"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Коммерческое</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="checkbox">
-                    <input id="offer_commerce" type="checkbox"/>
-                    <label for="offer_commerce"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span>Коммерческое</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="catalog__filter--block">
-                  <h4>Регионы</h4>
-                  <div class="checkbox">
-                    <input id="region_id1" type="checkbox"/>
-                    <label for="region_id1"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span class="text--ellipsis">Berlin and Brandenburg</span><small>2</small>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <input id="region_id2" type="checkbox"/>
-                    <label for="region_id2"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span class="text--ellipsis">Saxony</span><small>4</small>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <input id="region_id3" type="checkbox"/>
-                    <label for="region_id3"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span class="text--ellipsis">ТThuringia</span><small>1223</small>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <input id="region_id4" type="checkbox"/>
-                    <label for="region_id4"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span class="text--ellipsis">Franconia</span><small>2</small>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <input id="region_id5" type="checkbox"/>
-                    <label for="region_id5"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg><span class="text--ellipsis">Baden-Württemberg</span><small>1</small>
-                    </label>
+                  <div class="catalog__filter--block">
+                    <h4>Регионы</h4>
+                    <div class="checkbox">
+                      <input id="region_id1" type="checkbox"/>
+                      <label for="region_id1"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span class="text--ellipsis">Berlin and Brandenburg</span><small>2</small>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="region_id2" type="checkbox"/>
+                      <label for="region_id2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span class="text--ellipsis">Saxony</span><small>4</small>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="region_id3" type="checkbox"/>
+                      <label for="region_id3"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span class="text--ellipsis">ТThuringia</span><small>1223</small>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="region_id4" type="checkbox"/>
+                      <label for="region_id4"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span class="text--ellipsis">Franconia</span><small>2</small>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="region_id5" type="checkbox"/>
+                      <label for="region_id5"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span class="text--ellipsis">Baden-Württemberg</span><small>1</small>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="banner__group"><a class="banner__item" href=""><img src="img/banner-1.png" alt=""/><span class="caption"><span class="caption__title">Harley Benton</span><span class="caption__price">$ 35 000 </span></span></a><a class="banner__item" href=""><img src="img/banner-1.png" alt=""/><span class="caption"><span class="caption__title">Harley Benton</span><span class="caption__price">$ 35 000 </span></span></a></div>
+              <div class="banner__group fordesigners2"><a class="banner__item" href=""><img src="img/banner-1.png" alt=""/><span class="caption"><span class="caption__title">Harley Benton</span><span class="caption__price">$ 35 000 </span></span></a><a class="banner__item" href=""><img src="img/banner-1.png" alt=""/><span class="caption"><span class="caption__title">Harley Benton</span><span class="caption__price">$ 35 000 </span></span></a></div>
             </div>
             <div class="col lg-9 md-8">
               <div class="catalog__featured">
@@ -575,6 +582,11 @@
           </div>
         </div>
       </div>
+      <div class="fordesigners">
+        <div class="container">
+          <div class="banner__group"><a class="banner__item" href=""><img src="img/banner-1.png" alt=""/><span class="caption"><span class="caption__title">Harley Benton</span><span class="caption__price">$ 35 000 </span></span></a><a class="banner__item" href=""><img src="img/banner-1.png" alt=""/><span class="caption"><span class="caption__title">Harley Benton</span><span class="caption__price">$ 35 000 </span></span></a></div>
+        </div>
+      </div>
     </main>
     <footer class="base__footer">
       <div class="container">
@@ -622,7 +634,7 @@
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <!--script(src="js/main.min.js")-->
+    <script src="js/main.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

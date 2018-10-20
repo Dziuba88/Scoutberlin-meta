@@ -370,6 +370,10 @@
     #map_view {
       width: 100%;
       height: 550px;
+
+      @include smallDown {
+        height: 300px;
+      }
     }
   }
 
@@ -423,6 +427,17 @@
       background-color: #ffffff;
       padding-top: 20px;
       margin-bottom: 30px;
+
+      &.nobg {
+        background-color: transparent;
+        [data-carousel=viewed]:after {
+        background-color: #f2f2f1;
+      }
+
+      .directory__item {
+        margin-bottom: 0;
+      }
+      }
       
 
       &.top__error {

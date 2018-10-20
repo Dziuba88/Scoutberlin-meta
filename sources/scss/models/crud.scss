@@ -276,6 +276,7 @@
 
       @include smallDown {
         position: relative;
+        margin-bottom: 30px;
         &--row {
           flex-wrap: wrap;
           justify-content: flex-end;
