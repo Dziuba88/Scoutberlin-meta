@@ -8,6 +8,10 @@
 
   &__indexes {
     padding: 30px 0;
+
+    @include smallDown {
+      padding-top: 0;
+    }
   }
 
   &__nav {
@@ -145,6 +149,11 @@
         &--selected {
           text-align: center;
           padding-left: 0;
+
+          @include smallDown {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
         }
       }
       
@@ -173,6 +182,10 @@
     &--info {
       margin-bottom: 21px;
 
+      @include smallDown {
+        margin-bottom: 20px;
+      }
+
       ul {
         margin: 0;
         padding: 0;
@@ -195,6 +208,10 @@
           }
         }
       }
+    }
+
+    @include smallDown {
+      margin-bottom: 10px;
     }
   }
 }

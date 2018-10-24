@@ -171,6 +171,12 @@
       }
 
       &.promotion {
+        .basket__ads--summ {
+          width: 40%;
+        }
+        .basket__ads--period, .basket__ads--value {
+          width: 60%;
+        }
         .basket__ads--value, .basket__ads--period, .basket__ads--summ {
           span {font-size: 24px;}
         }
@@ -200,15 +206,15 @@
         display: block;
         cursor: pointer;
         background-color: #ffffff;
+        border: 2px solid #ffffff;
 
         img {
           display: block;
           margin: 0 auto;
           max-width: 100%;
-          border: 2px solid #ffffff;
         }
 
-        &:hover img {
+        &:hover {
           border-color: #1d7fe0;
         }
       }

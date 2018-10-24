@@ -8,6 +8,12 @@
 
   &__header {
     flex: none;
+
+    @include smallDown {
+      .cabinet__header {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   &__body {
@@ -21,6 +27,7 @@
       height: 100%;
       position: relative;
 
+
       &__wraper {
         position: absolute;
         top: 0;
@@ -28,10 +35,29 @@
         right: 0;
         bottom: 0;
         overflow: hidden;
+        &:after {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          content: '';
+          pointer-events: none; /* не блокировать скролл */
+          background: -moz-linear-gradient(top, rgba(242,242,241,0) 0%, rgba(242,242,241,1) 100%); 
+          background: -webkit-linear-gradient(top, rgba(242,242,241,0) 0%,rgba(242,242,241,1) 100%); 
+          background: linear-gradient(to bottom, rgba(242,242,241,0) 0%,rgba(242,242,241,1) 100%); 
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f2f2f1', endColorstr='#f2f2f1',GradientType=0 );
+          height: 40px;
+          z-index: 1;
+        }
+
+        .mCSB_scrollTools {
+          z-index: 2;
+        }
       }
 
       @include tabletDown {
-        height: 140px;
+        height: 165px;
         margin-bottom: 30px;
         &__wraper {top: 0 !important;}
       }

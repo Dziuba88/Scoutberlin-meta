@@ -4,10 +4,17 @@
     font-size: 32px;
     line-height: 1;
     margin: 0 0 30px;
+
+    @include smallDown {
+      margin-bottom: 15px;
+    }
   }
 
   &__list {
     margin-bottom: 60px;
+    @include smallDown {
+      margin-bottom: 20px;
+    }
     .panel {
       padding: 20px 0 20px 40px;
       border-bottom: 1px solid #cccccc;
