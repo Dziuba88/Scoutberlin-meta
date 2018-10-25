@@ -960,3 +960,17 @@ textarea::-webkit-scrollbar-thumb {
     display: none;
   }
 }
+
+.select__company {
+  padding-top: 10px;
+  padding-bottom: 30px;
+
+  .radio {
+    margin-bottom: 15px;
+  }
+}
+
+.sep15 {
+  display: block;
+  margin-bottom: 30px;
+}

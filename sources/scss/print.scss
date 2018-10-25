@@ -1,0 +1,182 @@
+@import 'lib/normalize';
+
+
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/futura.woff2') format('woff2'), url('../fonts/futura.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Futura';
+  font-weight: normal;
+  background-color: #ffffff;
+  font-size: 18px;
+  line-height: 1.66667;
+  color: #000000;
+}
+
+.wraper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
+
+  @media print {
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    display: flex;
+    margin: 0 -15px;
+
+    .col {
+      flex: none;
+      width: 50%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+
+    .col__xs {
+      flex: none;
+      width: 33.33333333%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  #map {
+    height: 100%;
+  }
+
+  &__header {
+    padding: 15px 0;
+    white-space: nowrap;
+    margin-bottom: 15px;
+
+    a, span {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    a {
+      margin-right: 30px;
+
+      img {
+        width: 67px;
+        height: 64px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      opacity: 0.6;
+    }
+  }
+
+}
+
+
+.gmnoprint, .gmnoscreen, img[src^="https://maps.gstatic.com/mapfiles/api-3/images/"] {
+  display: none !important;
+}
+
+
+.article {
+  &__header {
+    padding-bottom: 30px;
+    .row .col {
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+  }
+  &__text {
+    padding: 30px 0;
+
+    p {
+      margin: 0 0 30px;
+    }
+  }
+
+  &--title {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+  }
+
+  &--phone {
+    font-size: 21px;
+    line-height: 32px;
+    color: #1d7fe0;
+    display: block;
+  }
+
+  &--price, &--date {
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+
+  &--price {
+    font-size: 20px;
+    margin-right: 30px;
+  }
+
+  &--date {
+    font-size: 16px;
+    opacity: 0.6;
+  }
+
+  &--adress {
+    display: flex;
+    align-items: flex-start;
+    opacity: 0.6;
+    padding-top: 5px !important;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      fill: #000000;
+      margin-right: 10px;
+      flex: none;
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 20px;
+      display: block;
+      flex: 1;
+      white-space: normal;
+      line-height: 1;
+    }
+  }
+}
+
+@media print {
+  @page {
+      size:  auto;   /* auto is the initial value */
+      margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+
+    html {
+      background-color: #FFFFFF; 
+      margin: 0px;  /* this affects the margin on the html before sending to printer */
+    }
+
+    body {
+      margin: 5mm 5mm 5mm 5mm; /* margin you want for the content */
+    }
+}

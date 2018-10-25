@@ -154,8 +154,15 @@ $('[data-mfp-close]').click(function () {
 });
 
 $('[data-filters=catalog]').click(function () {
-  $(this).toggleClass('active');
-  $('.catalog__filter').toggleClass('show');
+  if ($(this).hasClass('active') ) {
+    $(this).removeClass('active');
+    $(this).text('показать фильтры');
+    $('.catalog__filter').removeClass('show');
+  } else {
+    $(this).addClass('active');
+    $(this).text('скрыть фильтры');
+    $('.catalog__filter').addClass('show');
+  }
 })
 
 var map_location = [48.8956712, 9.1656214];

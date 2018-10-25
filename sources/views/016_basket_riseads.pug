@@ -19,15 +19,19 @@ block content
           .basket__payment
             .basket__payment--header Выберите метод оплаты
             .row
-              .col.sm-4: .basket__payment--item
+              .col.sm-4.xs-6: .basket__payment--item
                 input#paypal(type="radio", name="payment")
                 label(for="paypal"): img(src="img/paypal.png", alt="")
-              .col.sm-4: .basket__payment--item
+              .col.sm-4.xs-6: .basket__payment--item
                 input#visa(type="radio", name="payment")
                 label(for="visa"): img(src="img/visa.png", alt="")
-              .col.sm-4: .basket__payment--item
+            .row
+              .col.sm-4.xs-6: .basket__payment--item
                 input#sofort(type="radio", name="payment")
                 label(for="sofort"): img(src="img/sofort.png", alt="")
+              .col.sm-4.xs-6: .basket__payment--item
+                input#mastercard(type="radio", name="payment")
+                label(for="mastercard"): img(src="img/mastercard.png", alt="")
             button.btn.blue()
               svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
               span Оплатить

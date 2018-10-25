@@ -497,7 +497,8 @@
                       <option>6 месяцев</option>
                       <option>1 год</option>
                     </select>
-                  </div><a class="btn block white" href=""><span>Купить</span></a>
+                  </div>
+                  <button class="btn block white" data-mfp-src="#buyModal-1" data-mfp-type="inline"><span>Купить</span></button>
                 </div>
               </div>
               <div class="cabinet__price--info">
@@ -541,7 +542,8 @@
                       <option>6 месяцев</option>
                       <option>1 год</option>
                     </select>
-                  </div><a class="btn block white" href=""><span>Купить</span></a>
+                  </div>
+                  <button class="btn block white" data-mfp-src="#buyModal-2" data-mfp-type="inline"><span>Купить</span></button>
                 </div>
               </div>
               <div class="cabinet__price--info">
@@ -572,7 +574,8 @@
                       <option>6 месяцев</option>
                       <option>1 год</option>
                     </select>
-                  </div><a class="btn block white" href=""><span>Купить</span></a>
+                  </div>
+                  <button class="btn block white" data-mfp-src="#buyModal-3" data-mfp-type="inline"><span>Купить</span></button>
                 </div>
               </div>
               <div class="cabinet__price--info">
@@ -591,6 +594,63 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="mfp-hide popup__default" id="buyModal-1">
+        <h3 class="popup__default--header">Выберите компанию для публикации</h3>
+        <div class="select__company">
+          <div class="radio">
+            <input id="buy-1_1" type="radio" name="buy-1"/>
+            <label for="buy-1_1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg><span>Giggle Inc.</span>
+            </label>
+          </div>
+          <div class="radio">
+            <input id="buy-1_2" type="radio" name="buy-1"/>
+            <label for="buy-1_2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg><span>Some company</span>
+            </label>
+          </div>
+          <div class="radio">
+            <input id="buy-1_3" type="radio" name="buy-1"/>
+            <label for="buy-1_3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg><span>Some company</span>
+            </label>
+          </div>
+          <div class="radio">
+            <input id="buy-1_4" type="radio" name="buy-1"/>
+            <label for="buy-1_4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg><span>Some company</span>
+            </label>
+          </div>
+        </div>
+        <button class="btn blue">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
+          </svg><span>Купить</span>
+        </button>
+        <button class="btn cancel" data-mfp-close="data-mfp-close"><span>Отмена</span></button>
+      </div>
+      <div class="mfp-hide popup__default" id="buyModal-2">
+        <h3 class="popup__default--header">Купить публикацию в справочнике<br>для &lt;название компании&gt;<span class="sep15"></span></h3>
+        <button class="btn blue">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"></path>
+          </svg><span>Купить</span>
+        </button>
+        <button class="btn cancel" data-mfp-close="data-mfp-close"><span>Отмена</span></button>
+      </div>
+      <div class="mfp-hide popup__default" id="buyModal-3">
+        <h3 class="popup__default--header">Создайте компанию, чтобы купить пакет<br>для справочника<span class="sep15"></span></h3>
+        <button class="btn blue"><span>Создать компанию</span></button>
+        <button class="btn cancel" data-mfp-close="data-mfp-close"><span>Отмена</span></button>
       </div>
     </main>
     <footer class="base__footer">

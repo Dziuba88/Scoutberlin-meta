@@ -185,7 +185,7 @@
   }
 
   &__payment {
-    padding: 0 30px;
+    padding: 0 0 0 30px;
     margin-bottom: 30px;
 
     &--header {
@@ -207,6 +207,7 @@
         cursor: pointer;
         background-color: #ffffff;
         border: 2px solid #ffffff;
+        overflow: hidden;
 
         img {
           display: block;
@@ -219,7 +220,7 @@
         }
       }
 
-      input:checked + label img {
+      input:checked + label {
         border-color: #1d7fe0;
       }
     }

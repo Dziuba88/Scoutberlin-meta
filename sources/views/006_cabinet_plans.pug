@@ -18,7 +18,7 @@ block content
                   option(selected="") 1 месяц
                   option 6 месяцев
                   option 1 год
-              a(href="").btn.block.white: span Купить
+              button(data-mfp-src="#buyModal-1" data-mfp-type="inline").btn.block.white: span Купить
           .cabinet__price--info: ul
             li <strong>200</strong> символов в описании
             li Показывать телефон
@@ -48,7 +48,7 @@ block content
                   option(selected="") 1 месяц
                   option 6 месяцев
                   option 1 год
-              a(href="").btn.block.white: span Купить
+              button(data-mfp-src="#buyModal-2" data-mfp-type="inline").btn.block.white: span Купить
           .cabinet__price--info: ul
             li <strong>1200</strong> символов в описании
             li Расширенные контакты компании
@@ -71,7 +71,7 @@ block content
                   option(selected="") 1 месяц
                   option 6 месяцев
                   option 1 год
-              a(href="").btn.block.white: span Купить
+              button(data-mfp-src="#buyModal-3" data-mfp-type="inline").btn.block.white: span Купить
           .cabinet__price--info: ul
             li <strong>2500</strong> символов в описании
             li Расширенные контакты компании
@@ -82,3 +82,42 @@ block content
             li Раздел услуг
             li Баннер на странице справочника
             li Баннер на главной
+  #buyModal-1.mfp-hide.popup__default
+    h3.popup__default--header Выберите компанию для публикации
+    .select__company
+      .radio
+        input#buy-1_1(type="radio", name="buy-1")
+        label(for="buy-1_1")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Giggle Inc.
+      .radio
+        input#buy-1_2(type="radio", name="buy-1")
+        label(for="buy-1_2")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Some company
+      .radio
+        input#buy-1_3(type="radio", name="buy-1")
+        label(for="buy-1_3")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Some company
+      .radio
+        input#buy-1_4(type="radio", name="buy-1")
+        label(for="buy-1_4")
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): polyline(points="20 6 9 17 4 12")
+          span Some company
+    button.btn.blue
+      svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
+      span Купить
+    button.btn.cancel(data-mfp-close): span Отмена
+  #buyModal-2.mfp-hide.popup__default
+    h3.popup__default--header Купить публикацию в справочнике<br>для &lt;название компании&gt;
+      span.sep15
+    button.btn.blue
+      svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M20.7 5.3a1 1 0 0 0-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z")
+      span Купить
+    button.btn.cancel(data-mfp-close): span Отмена
+  #buyModal-3.mfp-hide.popup__default
+    h3.popup__default--header Создайте компанию, чтобы купить пакет<br>для справочника
+      span.sep15
+    button.btn.blue: span Создать компанию
+    button.btn.cancel(data-mfp-close): span Отмена
