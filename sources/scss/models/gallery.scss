@@ -1,5 +1,4 @@
 .gallery {
-
   img {
     display: block;
     width: 100%;
@@ -17,18 +16,16 @@
   &__container {
     position: relative;
 
-
-
     &--left {
       margin-right: 150px;
 
-      [data-carousel=preview] {
+      [data-carousel='preview'] {
         .item .play {
           display: block;
           position: absolute;
           width: 60px;
           height: 60px;
-          background-color: rgba(#1d7fe0, .6);
+          background-color: rgba(#1d7fe0, 0.6);
           color: #fff;
           padding: 18px;
           border-radius: 100%;
@@ -52,7 +49,7 @@
           top: 0;
           height: 100%;
           padding: 5px;
-          background-color: rgba(#010101, .9);
+          background-color: rgba(#010101, 0.9);
           color: #ffffff;
           opacity: 0.5;
           border: none;
@@ -77,8 +74,6 @@
           &.slick-next {
             right: 0;
           }
-
-
         }
       }
 
@@ -94,7 +89,7 @@
       right: 0;
       top: 0;
 
-      [data-carousel=nav] {
+      [data-carousel='nav'] {
         height: 100%;
         width: 145px;
         font-size: 0;
@@ -135,7 +130,7 @@
         }
 
         .slick-list {
-          background-color: #010101;
+          //background-color: #010101;
           height: 100% !important;
           padding: 0 !important;
         }
@@ -143,10 +138,14 @@
         .slick-slide {
           display: block !important;
           width: 100% !important;
-          opacity: 0.4;
           border: none !important;
+          background-color: #010101;
 
-          &.slick-center {
+          img {
+            opacity: 0.4;
+          }
+
+          &.slick-center img {
             opacity: 1;
           }
         }
@@ -155,7 +154,7 @@
           position: absolute;
           width: 40px;
           height: 40px;
-          background-color: rgba(#1d7fe0, .6);
+          background-color: rgba(#1d7fe0, 0.6);
           color: #fff;
           padding: 12px;
           border-radius: 100%;
@@ -171,7 +170,6 @@
             fill: currentColor;
           }
         }
-
       }
 
       @include smallDown {

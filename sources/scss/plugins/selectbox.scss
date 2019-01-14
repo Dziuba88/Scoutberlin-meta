@@ -19,7 +19,7 @@
       height: 8px;
       border: 1px solid transparent;
       border-left-color: #666666;
-      border-bottom-color:#666666;
+      border-bottom-color: #666666;
       transform: rotate(-45deg);
       content: '';
       position: absolute;
@@ -32,10 +32,9 @@
     &.active:after {
       border-color: transparent;
       border-right-color: #666666;
-      border-top-color:#666666;
+      border-top-color: #666666;
       margin-top: 0;
     }
-
 
     &.active:before {
       content: '';
@@ -55,9 +54,6 @@
     @include smallDown {
       padding: 10px 15px;
     }
-
-
-
   }
 
   &--items {
@@ -68,8 +64,10 @@
     background-color: #ffffff;
     margin-top: 10px;
     padding: 10px 0;
-    box-shadow: 0 10px 20px rgba(#010101, .2);
+    box-shadow: 0 10px 20px rgba(#010101, 0.2);
     z-index: 99;
+    max-height: 272px;
+    overflow-x: auto;
 
     &.hide {
       display: none;
@@ -83,16 +81,11 @@
       line-height: 1;
       color: #666666;
 
-      &:hover, &.selected {
+      &:hover,
+      &.selected {
         color: #1d7fe0;
       }
-
     }
-
-
-
-
-
   }
   &.totop .selectbox--selected.active:before {
     content: '';

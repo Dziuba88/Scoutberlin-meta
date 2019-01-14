@@ -9,8 +9,6 @@
 @import 'plugins/multiselect';
 @import 'plugins/mCustomScrollbar';
 
-
-
 @import 'models/header';
 @import 'models/filters';
 @import 'models/banners';
@@ -32,7 +30,6 @@
 @import 'models/main__page';
 @import 'models/crud';
 
-
 .cookies__alert {
   position: fixed;
   bottom: 80px;
@@ -41,7 +38,7 @@
   width: 724px;
   margin-left: -362px;
   background-color: #ffffff;
-  box-shadow: 0 10px 40px rgba(#000000, .1);
+  box-shadow: 0 10px 40px rgba(#000000, 0.1);
   padding: 20px;
   display: flex;
   align-items: center;

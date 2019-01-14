@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title ADD TITLE
+    link(rel="stylesheet", href="css/print.min.css")
+  body
+    .wraper.invoice
+      .wraper__header
+        a(href=""): img(src="img/logo.png", alt="")
+        span Сайт объявлений в Германии
+      .invoice__header
+        h1.invoice__header--title Мой счет
+        .invoice__header--date 
+          span Дата: 
+          strong дек. 20, 2018
+      .invoice__body
+        .invoice__body--col
+          .label Номер заказа
+          .text 000000000000036
+        .invoice__body--col
+          .label Наименование пакета
+          .text Поднятие обьявлений
+        .invoice__body--col
+          .label количество
+          .text 50 поднятий
+        .invoice__body--col
+          .label Сумма
+          .text 39,9 €

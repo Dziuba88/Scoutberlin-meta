@@ -1,6 +1,5 @@
 @import 'lib/normalize';
 
-
 @font-face {
   font-family: 'Futura';
   src: url('../fonts/futura.woff2') format('woff2'), url('../fonts/futura.woff') format('woff');
@@ -22,6 +21,10 @@ body {
   width: 1200px;
   padding: 0 15px;
 
+  &.invoice {
+    width: 800px;
+  }
+
   @media print {
     width: 100%;
   }
@@ -37,6 +40,7 @@ body {
   .row {
     display: flex;
     margin: 0 -15px;
+    flex-wrap: wrap;
 
     .col {
       flex: none;
@@ -62,7 +66,8 @@ body {
     white-space: nowrap;
     margin-bottom: 15px;
 
-    a, span {
+    a,
+    span {
       display: inline-block;
       line-height: 1;
       vertical-align: middle;
@@ -82,14 +87,11 @@ body {
       opacity: 0.6;
     }
   }
-
 }
-
 
 .gmnoprint, .gmnoscreen, img[src^="https://maps.gstatic.com/mapfiles/api-3/images/"] {
   display: none !important;
 }
-
 
 .article {
   &__header {
@@ -98,7 +100,6 @@ body {
       margin-bottom: 5px;
       white-space: nowrap;
     }
-
   }
   &__text {
     padding: 30px 0;
@@ -123,7 +124,8 @@ body {
     display: block;
   }
 
-  &--price, &--date {
+  &--price,
+  &--date {
     display: inline-block;
     line-height: 20px;
     vertical-align: middle;
@@ -165,18 +167,63 @@ body {
   }
 }
 
+.invoice {
+  &__header {
+    &--title {
+      font-size: 32px;
+      line-height: 32px;
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+    }
+    &--date {
+      span,
+      strong {
+        font-weight: 400;
+      }
+      span {
+        color: #666666;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+
+    &--col {
+      flex: none;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 30px;
+
+      .label {
+        color: #666666;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .text {
+        font-size: 24px;
+        line-height: 1;
+        color: #000000;
+      }
+    }
+  }
+}
+
 @media print {
   @page {
-      size:  auto;   /* auto is the initial value */
-      margin: 0mm;  /* this affects the margin in the printer settings */
-    }
+    size: auto; /* auto is the initial value */
+    margin: 0mm; /* this affects the margin in the printer settings */
+  }
 
-    html {
-      background-color: #FFFFFF; 
-      margin: 0px;  /* this affects the margin on the html before sending to printer */
-    }
+  html {
+    background-color: #ffffff;
+    margin: 0px; /* this affects the margin on the html before sending to printer */
+  }
 
-    body {
-      margin: 5mm 5mm 5mm 5mm; /* margin you want for the content */
-    }
+  body {
+    margin: 5mm 5mm 5mm 5mm; /* margin you want for the content */
+  }
 }

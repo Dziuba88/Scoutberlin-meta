@@ -31,9 +31,7 @@
         margin: 0;
         padding: 0;
 
-
         &.user {
-
           .unsigned {
             color: #1d7fe0;
             display: flex;
@@ -97,6 +95,9 @@
             }
           }
         }
+        &.region .dropdown-menu {
+          width: 240px;
+        }
       }
     }
   }
@@ -106,7 +107,7 @@
     .navbar {
       position: static;
       top: -100px;
-      transition: top .5s ease-in-out;
+      transition: top 0.5s ease-in-out;
 
       &__wraper {
         background-color: #ffffff;
@@ -122,13 +123,9 @@
           display: block;
           position: relative;
           text-decoration: none;
-          transition: .15s ease-in-out;
+          transition: 0.15s ease-in-out;
           width: 60px;
           height: 60px;
-
-          &:hover {
-            filter: grayscale(1) contrast(40%) brightness(150%);
-          }
 
           img {
             display: block;
@@ -157,7 +154,7 @@
           flex: none;
 
           &:hover {
-            fill: #1d7fe0
+            fill: #1d7fe0;
           }
         }
 
@@ -173,10 +170,19 @@
           flex: 1;
           min-width: 0;
 
-          &::-webkit-input-placeholder {color: #eeeeee;}
-          &::-moz-placeholder {color: #eeeeee;font-size: 24px;}
-          &:-ms-input-placeholder {color: #eeeeee;}
-          &:-moz-placeholder {color: #eeeeee;}
+          &::-webkit-input-placeholder {
+            color: #eeeeee;
+          }
+          &::-moz-placeholder {
+            color: #eeeeee;
+            font-size: 24px;
+          }
+          &:-ms-input-placeholder {
+            color: #eeeeee;
+          }
+          &:-moz-placeholder {
+            color: #eeeeee;
+          }
 
           @include mediumDown {
             font-size: 16px;
@@ -188,7 +194,6 @@
           align-items: center;
 
           .selectbox {
-
             &.ctrl__cat .selectbox--selected {
               background: url(../img/crud_1.png) no-repeat center left;
             }
@@ -201,17 +206,17 @@
               padding: 20px 10px 20px 25px;
               font-size: 12px;
               text-transform: uppercase;
-              color: rgba(#000000, .8);
+              color: rgba(#000000, 0.8);
               z-index: 100;
 
-              &:hover, &.active {
+              &:hover,
+              &.active {
                 color: #000000;
               }
               &:after {
                 display: none;
               }
             }
-
 
             &--items {
               right: auto;
@@ -228,17 +233,16 @@
               &::-webkit-scrollbar {
                 width: 2px;
               }
-              
+
               &::-webkit-scrollbar-track {
-                  border-radius: 2px;
-                  background-color: #e6e6e5;
+                border-radius: 2px;
+                background-color: #e6e6e5;
               }
-              
+
               &::-webkit-scrollbar-thumb {
-                  border-radius: 2px;
-                  background-color: #1d7fe0;
+                border-radius: 2px;
+                background-color: #1d7fe0;
               }
-            
             }
           }
 
@@ -253,15 +257,35 @@
             width: 90px;
             font-family: 'Futura';
             font-weight: normal;
-            &::-webkit-input-placeholder {color: rgba(#000000, .8);font-size: 12px;}
-            &::-moz-placeholder {color: rgba(#000000, .8);font-size: 12px;}
-            &:-ms-input-placeholder {color: rgba(#000000, .8);font-size: 12px;}
-            &:-moz-placeholder {color: rgba(#000000, .8);font-size: 12px;}
+            &::-webkit-input-placeholder {
+              color: rgba(#000000, 0.8);
+              font-size: 12px;
+            }
+            &::-moz-placeholder {
+              color: rgba(#000000, 0.8);
+              font-size: 12px;
+            }
+            &:-ms-input-placeholder {
+              color: rgba(#000000, 0.8);
+              font-size: 12px;
+            }
+            &:-moz-placeholder {
+              color: rgba(#000000, 0.8);
+              font-size: 12px;
+            }
 
-            &:hover::-webkit-input-placeholder {color: #010101}
-            &:hover::-moz-placeholder {color: #010101}
-            &:hover:-ms-input-placeholder {color: #010101}
-            &:hover:-moz-placeholder {color: #010101}
+            &:hover::-webkit-input-placeholder {
+              color: #010101;
+            }
+            &:hover::-moz-placeholder {
+              color: #010101;
+            }
+            &:hover:-ms-input-placeholder {
+              color: #010101;
+            }
+            &:hover:-moz-placeholder {
+              color: #010101;
+            }
           }
 
           .ctrl__find .btn.link {
@@ -273,17 +297,14 @@
           }
         }
 
-        @include mediumDown {padding: 0 5px 0 30px;}
+        @include mediumDown {
+          padding: 0 5px 0 30px;
+        }
       }
 
       &--button {
-        flex: none
+        flex: none;
       }
-
-
-
-
-
 
       &.sticky {
         position: fixed;
@@ -291,21 +312,19 @@
         left: 0;
         right: 0;
         z-index: 99;
-        box-shadow: 0 0 10px rgba(#101010, .2);
+        box-shadow: 0 0 10px rgba(#101010, 0.2);
         background-color: #ffffff;
         padding-right: 17px;
         .navbar__wraper {
-          
         }
         .navbar--brand a img {
           //height: 60px;
         }
       }
-
     }
   }
 
-  @include tabletDown{
+  @include tabletDown {
     display: none;
   }
 }
@@ -330,7 +349,8 @@
     padding: 0 15px;
   }
 
-  &--brand, &--toggle {
+  &--brand,
+  &--toggle {
     display: block;
     flex: none;
   }
@@ -344,7 +364,7 @@
       display: block;
       position: relative;
       text-decoration: none;
-      transition: .15s ease-in-out;
+      transition: 0.15s ease-in-out;
       width: 60px;
       height: 60px;
 
@@ -367,7 +387,7 @@
     flex: 1;
 
     .btn.link {
-      color: rgba(#000000, .2);
+      color: rgba(#000000, 0.2);
       transition: none;
 
       &:hover {
@@ -382,7 +402,7 @@
       svg {
         width: 20px;
         height: 20px;
-        fill: rgba(#000000, .6);
+        fill: rgba(#000000, 0.6);
       }
     }
   }
@@ -398,8 +418,8 @@
   }
 }
 
-.popup__default .signin, .popup__default .signup {
-
+.popup__default .signin,
+.popup__default .signup {
   .row {
     align-items: center;
   }
@@ -487,7 +507,7 @@
           text-decoration: none;
 
           &:hover {
-            color: #1d7fe0
+            color: #1d7fe0;
           }
           svg {
             width: 18px;

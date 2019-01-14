@@ -12,7 +12,6 @@
       top: 0;
       right: 0;
 
-
       @include smallDown {
         width: 100%;
         top: 100%;
@@ -66,12 +65,18 @@
             left: 10px;
             background-color: #ffffff;
 
-            input+label svg {margin: 0;}
+            input + label svg {
+              margin: 0;
+            }
           }
         }
         &__body {
           padding: 20px;
-          flex: 1
+          flex: 1;
+        }
+        &__text {
+          height: 88px;
+          overflow: hidden;
         }
         &__controls {
           flex: none;
@@ -96,7 +101,8 @@
         &__price {
           margin-bottom: 15px;
           flex: none;
-          small, span {
+          small,
+          span {
             display: block;
             line-height: 1;
           }
@@ -112,27 +118,28 @@
         }
         &__readmore a {
           color: #1d7fe0;
-          background-color:transparent;
+          background-color: transparent;
           font-size: 0;
           line-height: 20px;
-      
+
           &:hover {
             color: #010101;
           }
-      
-          svg, span {
+
+          svg,
+          span {
             display: inline-block;
             line-height: 1;
             vertical-align: middle;
           }
-      
+
           svg {
             width: 16px;
             height: 16px;
             fill: currentColor;
             margin-left: 5px;
           }
-      
+
           span {
             font-size: 12px;
             text-transform: uppercase;
@@ -144,21 +151,21 @@
       @include tabletDown {
         flex-direction: column;
 
-          .item__image {
-            padding-top: 56.25%;
-            width: 100%;
-          }
+        .item__image {
+          padding-top: 56.25%;
+          width: 100%;
+        }
 
-          .item__controls {
-            padding: 20px;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-          }
+        .item__controls {
+          padding: 20px;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+        }
 
-          .item__price {
-            //flex: 1;
-          }
+        .item__price {
+          //flex: 1;
+        }
       }
     }
   }
@@ -188,20 +195,24 @@
           padding: 20px 0 20px 20px;
           img {
             filter: brightness(90%);
-            max-width: 100%;;
+            max-width: 100%;
           }
 
           .checkbox {
             margin-right: 20px;
             background-color: #ffffff;
           }
-          .checkbox input+label svg {
+          .checkbox input + label svg {
             margin: 0;
           }
         }
 
         &__body {
           padding: 20px;
+        }
+        &__text {
+          height: 88px;
+          overflow: hidden;
         }
 
         &__controls {
@@ -218,7 +229,7 @@
           }
 
           &--bottom {
-            flex: none
+            flex: none;
           }
         }
 
@@ -229,7 +240,8 @@
           color: #010101;
           margin-bottom: 5px;
 
-          span, small {
+          span,
+          small {
             display: block;
           }
 
@@ -263,7 +275,7 @@
             vertical-align: middle;
             color: #1d7fe0;
           }
-  
+
           a {
             display: inline-block;
             font-size: 12px;
@@ -274,37 +286,37 @@
             color: #666666;
             margin-left: 10px;
             padding-top: 5px;
-  
+
             &:hover {
               color: #010101;
             }
-  
           }
         }
 
         &__readmore a {
           color: #1d7fe0;
-          background-color:transparent;
+          background-color: transparent;
           font-size: 0;
           line-height: 20px;
-      
+
           &:hover {
             color: #010101;
           }
-      
-          svg, span {
+
+          svg,
+          span {
             display: inline-block;
             line-height: 1;
             vertical-align: middle;
           }
-      
+
           svg {
             width: 16px;
             height: 16px;
             fill: currentColor;
             margin-left: 5px;
           }
-      
+
           span {
             font-size: 12px;
             text-transform: uppercase;
@@ -367,8 +379,6 @@
           display: block;
           padding-bottom: 0;
 
-
-
           .checkbox {
             position: static;
             margin-bottom: 20px;
@@ -399,10 +409,8 @@
     }
   }
 
-
   .pagination {
     padding: 30px 0;
     margin: 0;
   }
-
 }

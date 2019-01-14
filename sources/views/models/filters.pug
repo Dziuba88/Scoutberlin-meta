@@ -3,16 +3,40 @@
     h4 Категории
     ul
       li.parent
-        a(href="").active Авто
+        a(data-toggle="submenu").active Авто
         ul.child
           li: a(href="") Суперкары
           li: a(href="") Внедорожники
           li: a(href="") Легковые
           li: a(href="") Грузовики
-      li: a(href="") Одежда
-      li: a(href="") Товары для дома
-      li: a(href="") Недвижимость
-      li: a(href="") Знакомства
+      li.parent
+        a(data-toggle="submenu") Одежда
+        ul.child
+          li: a(href="") Суперкары
+          li: a(href="") Внедорожники
+          li: a(href="") Легковые
+          li: a(href="") Грузовики
+      li.parent
+        a(data-toggle="submenu") Товары для дома
+        ul.child
+          li: a(href="") Суперкары
+          li: a(href="") Внедорожники
+          li: a(href="") Легковые
+          li: a(href="") Грузовики
+      li.parent
+        a(data-toggle="submenu") Недвижимость
+        ul.child
+          li: a(href="") Суперкары
+          li: a(href="") Внедорожники
+          li: a(href="") Легковые
+          li: a(href="") Грузовики
+      li.parent
+        a(data-toggle="submenu") Знакомства
+        ul.child
+          li: a(href="") Суперкары
+          li: a(href="") Внедорожники
+          li: a(href="") Легковые
+          li: a(href="") Грузовики
   .catalog__filter--block
     h4 Цена
     .inline_inputs
