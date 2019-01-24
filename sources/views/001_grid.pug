@@ -21,7 +21,15 @@ block content
         .col.lg-9.md-8
           .catalog__featured
             .row
-              - for(i=1;i<=3;i++)
+              .col.md-4
+                a(href="").catalog__featured--item
+                  span.image: img(src="img/catalog-item.png", alt="")
+                  span.caption
+                    span.caption__title Harley Benton
+                    span.caption__info
+                      span.caption__adress Bavaria
+                      span.caption__price $ 35 000 
+              - for(i=1;i<=2;i++)
                 .col.md-4
                   a(href="").catalog__featured--item
                     span.image: img(src="img/catalog-featured.png", alt="")
