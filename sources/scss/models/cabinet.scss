@@ -31,8 +31,8 @@
 
       li {
         margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 0;
+        line-height: 24px;
 
         &:last-child {
           margin-bottom: 0;
@@ -41,6 +41,8 @@
         a {
           text-decoration: none;
           color: #666666;
+          display: inline-block;
+          min-height: 24px;
 
           &:hover {
             color: #1d7fe0;
@@ -51,6 +53,7 @@
             line-height: 1;
             vertical-align: middle;
             margin-right: 15px;
+            font-size: 18px;
 
             &:last-child {
               margin-right: 0;
@@ -61,7 +64,9 @@
               background-color: #ffffff;
               border-radius: 4px;
               font-size: 16px;
-              padding: 4px .5em;
+              padding: 4px 0.5em;
+              height: 24px;
+              line-height: 1;
             }
           }
         }
@@ -111,10 +116,11 @@
       background: #ffffff url(../img/dots-grey.png) repeat-x bottom center;
       color: #1d7fe0;
       text-align: center;
-      transition: .25s ease-in-out;
+      transition: 0.25s ease-in-out;
     }
 
-    &:hover &--body, &.active &--body {
+    &:hover &--body,
+    &.active &--body {
       background: #1d7fe0 url(../img/dots-white.png) repeat-x bottom center;
       color: #ffffff;
     }
@@ -156,11 +162,11 @@
           }
         }
       }
-      
-      
-      .selectbox, .btn {
+
+      .selectbox,
+      .btn {
         display: block;
-        flex:none;
+        flex: none;
         width: 50%;
       }
 

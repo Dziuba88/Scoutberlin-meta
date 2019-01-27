@@ -201,16 +201,25 @@
       .row {
         .col {
           display: flex;
+          @include smallDown {
+            display: block;
+          }
         }
       }
       .input__group {
         flex: 1;
         margin: 0;
+        @include smallDown {
+          margin-bottom: 10px;
+        }
       }
 
       .btn {
         width: 270px;
         flex: none;
+        @include smallDown {
+          width: 100%;
+        }
       }
     }
   }

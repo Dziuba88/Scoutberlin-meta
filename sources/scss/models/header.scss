@@ -171,17 +171,17 @@
           min-width: 0;
 
           &::-webkit-input-placeholder {
-            color: #eeeeee;
+            color: #666;
           }
           &::-moz-placeholder {
-            color: #eeeeee;
+            color: #666;
             font-size: 24px;
           }
           &:-ms-input-placeholder {
-            color: #eeeeee;
+            color: #666;
           }
           &:-moz-placeholder {
-            color: #eeeeee;
+            color: #666;
           }
 
           @include mediumDown {
@@ -195,11 +195,13 @@
 
           .selectbox {
             &.ctrl__cat .selectbox--selected {
-              background: url(../img/crud_1.png) no-repeat center left;
+              background: url(../img/grid.svg) no-repeat center left;
+              background-size: 18px;
             }
 
             &.ctrl__dist .selectbox--selected {
-              background: url(../img/crud_3.png) no-repeat center left;
+              background: url(../img/disc.svg) no-repeat center left;
+              background-size: 18px;
             }
 
             &--selected {
@@ -247,7 +249,8 @@
           }
 
           .ctrl__index {
-            background: url(../img/crud_2.png) no-repeat center left;
+            background: url(../img/map-pin.svg) no-repeat center left;
+            background-size: 18px;
             padding-left: 25px;
             font-size: 12px !important;
             text-transform: uppercase;
