@@ -1,5 +1,4 @@
 .company {
-
   &__header {
     display: flex;
     margin-bottom: 30px;
@@ -40,7 +39,8 @@
             margin-right: 0;
           }
 
-          svg, span {
+          svg,
+          span {
             display: inline-block;
             line-height: 1;
             vertical-align: middle;
@@ -72,15 +72,25 @@
           color: #1d7fe0;
         }
 
-        &:last-child {
-          margin-right: 0;
-        }
-
         svg {
           display: block;
           width: 16px;
           height: 16px;
           fill: currentColor;
+        }
+
+        &.star {
+          svg {
+            fill: none;
+          }
+          &:hover svg {
+            fill: #f1cc1f !important;
+            color: #f1cc1f !important;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
@@ -157,7 +167,7 @@
   &__gallery {
     margin-bottom: 21px;
 
-    [data-carousel=gallery] {
+    [data-carousel='gallery'] {
       .owl-nav {
         button {
           position: absolute;
@@ -193,18 +203,18 @@
 
       a {
         display: block;
-        background-color:#1d7fe0;
+        background-color: #1d7fe0;
         overflow: hidden;
-        
+
         img {
-          transition: .25s ease-in-out;
+          transition: 0.25s ease-in-out;
         }
 
         &:hover {
           img {
             opacity: 0.5;
             filter: grayscale(1);
-            transform: scale(1.25)
+            transform: scale(1.25);
           }
         }
       }
@@ -237,7 +247,9 @@
         color: #010101;
       }
 
-      span {display: block;}
+      span {
+        display: block;
+      }
 
       &.phone {
         span {
@@ -262,7 +274,6 @@
           &:hover {
             color: #010101;
           }
-
         }
       }
 
@@ -270,6 +281,8 @@
         a {
           text-decoration: none;
           color: #1d7fe0;
+          word-wrap: break-word;
+          word-break: break-all;
 
           &:hover {
             color: #010101;
@@ -335,7 +348,8 @@
         white-space: nowrap;
         padding-bottom: 5px;
 
-        span, svg {
+        span,
+        svg {
           display: inline-block;
           line-height: 1;
           vertical-align: middle;
@@ -379,30 +393,29 @@
           color: #010101;
 
           &::-webkit-input-placeholder {
-            color: rgba(#010101, .4);
+            color: rgba(#010101, 0.4);
             font-size: 12px;
             line-height: 15px;
             text-transform: uppercase;
           }
           &::-moz-placeholder {
-            color: rgba(#010101, .4);
+            color: rgba(#010101, 0.4);
             font-size: 12px;
             line-height: 15px;
             text-transform: uppercase;
           }
           &:-ms-input-placeholder {
-            color: rgba(#010101, .4);
+            color: rgba(#010101, 0.4);
             font-size: 12px;
             line-height: 15px;
             text-transform: uppercase;
           }
           &:-moz-placeholder {
-            color: rgba(#010101, .4);
+            color: rgba(#010101, 0.4);
             font-size: 12px;
             line-height: 15px;
             text-transform: uppercase;
           }
-
         }
       }
 
@@ -421,7 +434,7 @@
           font-size: 12px;
           line-height: 15px;
           text-transform: uppercase;
-          color: rgba(#010101, .6);
+          color: rgba(#010101, 0.6);
           margin-bottom: 10px;
         }
       }
@@ -438,18 +451,18 @@
         label {
           display: block;
           color: #cccccc;
-          transition: .25s ease-in-out;
+          transition: 0.25s ease-in-out;
           cursor: pointer;
           padding: 0 4px;
 
-          &[data-value="5"] {
+          &[data-value='5'] {
             padding-right: 0;
           }
-  
-          &[data-value="1"] {
+
+          &[data-value='1'] {
             padding-left: 0;
           }
-  
+
           svg {
             display: block;
             width: 20px;
@@ -457,22 +470,27 @@
             fill: none;
             stroke: currentColor;
             stroke-width: 2px;
-            stroke-linecap:round;
+            stroke-linecap: round;
             stroke-linejoin: round;
           }
         }
 
-        label:hover, label:focus, label:hover ~ label, label:focus ~ label, input[type='radio']:checked ~ label {
+        label:hover,
+        label:focus,
+        label:hover ~ label,
+        label:focus ~ label,
+        input[type='radio']:checked ~ label {
           color: #f1cc1f;
         }
 
-        label:hover svg, label:focus svg, label:hover ~ label svg, label:focus ~ label svg, input[type='radio']:checked ~ label svg {
+        label:hover svg,
+        label:focus svg,
+        label:hover ~ label svg,
+        label:focus ~ label svg,
+        input[type='radio']:checked ~ label svg {
           fill: currentColor;
           stroke: currentColor;
         }
-
-
-
       }
 
       @include tabletDown {
@@ -482,7 +500,7 @@
           margin: 0 0 10px;
           width: 100%;
           flex: none;
-          border-bottom: 1px solid #ccc;  
+          border-bottom: 1px solid #ccc;
         }
         .form--rating {
           flex: 1;
@@ -526,7 +544,7 @@
 
           &--rate {
             padding: 10px 0;
-            letter-spacing: .025em;
+            letter-spacing: 0.025em;
             white-space: nowrap;
             color: #cccccc;
 
@@ -539,37 +557,43 @@
               fill: none;
               stroke: currentColor;
               stroke-width: 2px;
-              stroke-linecap:round;
+              stroke-linecap: round;
               stroke-linejoin: round;
             }
 
-            &[data-value="5"] svg {
+            &[data-value='5'] svg {
               fill: #f1cc1f;
               stroke: #f1cc1f;
             }
 
-            &[data-value="4"] {
-              svg:nth-child(1), svg:nth-child(2), svg:nth-child(3), svg:nth-child(4) {
+            &[data-value='4'] {
+              svg:nth-child(1),
+              svg:nth-child(2),
+              svg:nth-child(3),
+              svg:nth-child(4) {
                 fill: #f1cc1f;
                 stroke: #f1cc1f;
               }
             }
 
-            &[data-value="3"] {
-              svg:nth-child(1), svg:nth-child(2), svg:nth-child(3) {
+            &[data-value='3'] {
+              svg:nth-child(1),
+              svg:nth-child(2),
+              svg:nth-child(3) {
                 fill: #f1cc1f;
                 stroke: #f1cc1f;
               }
             }
 
-            &[data-value="2"] {
-              svg:nth-child(1), svg:nth-child(2) {
+            &[data-value='2'] {
+              svg:nth-child(1),
+              svg:nth-child(2) {
                 fill: #f1cc1f;
                 stroke: #f1cc1f;
               }
             }
 
-            &[data-value="1"] {
+            &[data-value='1'] {
               svg:nth-child(1) {
                 fill: #f1cc1f;
                 stroke: #f1cc1f;
@@ -597,24 +621,25 @@
               background-color: transparent;
               border: none;
               cursor: pointer;
-        
+
               &:hover {
                 color: #010101;
               }
-        
-              svg, span {
+
+              svg,
+              span {
                 display: inline-block;
                 line-height: 1;
                 vertical-align: middle;
               }
-        
+
               svg {
                 width: 20px;
                 height: 20px;
                 margin-right: 10px;
                 fill: currentColor;
               }
-        
+
               span {
                 font-size: 12px;
                 text-transform: uppercase;
@@ -640,5 +665,3 @@
     }
   }
 }
-
-

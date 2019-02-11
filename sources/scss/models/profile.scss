@@ -878,7 +878,8 @@
         }
 
         &.title,
-        &.status {
+        &.status,
+        &.package {
           flex: 1;
         }
 
@@ -1109,7 +1110,8 @@
         .column {
           &.created,
           &.title,
-          &.status {
+          &.status,
+          &.package {
             display: none;
           }
           /*&.status {
@@ -1148,13 +1150,14 @@
         .column {
           &.created,
           &.title,
-          &.status {
+          &.status,
+          &.package {
             padding: 0 0 20px;
             width: 100%;
             margin: 0;
           }
 
-          &.status {
+          &.package {
             padding-bottom: 0;
           }
 

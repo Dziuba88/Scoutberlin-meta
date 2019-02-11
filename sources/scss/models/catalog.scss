@@ -6,6 +6,7 @@
       position: relative;
       margin-bottom: 15px;
       height: 100%;
+      min-height: 320px;
 
       &:after {
         content: '';
@@ -554,6 +555,15 @@
 
           &:hover {
             color: #1d7fe0;
+          }
+          &.star {
+            svg {
+              fill: none;
+            }
+            &:hover svg {
+              fill: #f1cc1f !important;
+              color: #f1cc1f !important;
+            }
           }
         }
 

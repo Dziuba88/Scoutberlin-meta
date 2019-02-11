@@ -496,9 +496,9 @@
                 </svg><span>25</span>
               </div>
               <div class="created"><span>Jun 18, 2018</span></div>
-              <div class="controls"><a data-add="data-add">
-                  <svg class="feather feather-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              <div class="controls"><a class="star" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                   </svg></a><a href="">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M20 8h-1V2c0-.6-.4-1-1-1H6c-.6 0-1 .4-1 1v6H4a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3h1v3c0 .6.4 1 1 1h12c.6 0 1-.4 1-1v-3h1a3 3 0 0 0 3-3v-5a3 3 0 0 0-3-3zM7 3h10v5H7V3zm10 18H7v-6h10v6zm4-5c0 .6-.4 1-1 1h-1v-3c0-.6-.4-1-1-1H6c-.6 0-1 .4-1 1v3H4c-.6 0-1-.4-1-1v-5c0-.6.4-1 1-1h16c.6 0 1 .4 1 1v5z"></path>
@@ -511,36 +511,39 @@
           </div>
           <div class="row">
             <div class="col lg-9 md-8">
-              <!--.catalog--item__gallery
-              .map__container: #big_map
-              .gallery__container
-                .gallery__container--left
-                  .gallery(data-carousel="preview")
-                    a(data-mfp-src="https://www.youtube.com/watch?v=Q0oIoR9mLwc").item.item__video
-                      span.play: svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z")
-                      img(src="img/gallery-item.jpg", alt="")
-                    a(data-mfp-src="img/gallery-item.jpg").item: img(src="img/gallery-item.jpg", alt="")
-                    a(data-mfp-src="img/gallery-item.jpg").item: img(src="img/gallery-item.jpg", alt="")
-                    a(data-mfp-src="img/gallery-item.jpg").item: img(src="img/gallery-item.jpg", alt="")
-                    a(data-mfp-src="https://www.youtube.com/watch?v=RtBbinpK5XI").item.item__video
-                      span.play: svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z")
-                      img(src="img/gallery-item.jpg", alt="")
-                    a(data-mfp-src="img/gallery-item.jpg").item: img(src="img/gallery-item.jpg", alt="")
-                    a(data-mfp-src="img/gallery-item.jpg").item: img(src="img/gallery-item.jpg", alt="")
-                .gallery__container--right
-                  .gallery(data-carousel="nav")
-                    .item
-                      span.play: svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z")
-                      img(src="img/gallery-thumb.jpg", alt="")
-                    .item: img(src="img/gallery-thumb.jpg", alt="")
-                    .item: img(src="img/gallery-thumb.jpg", alt="")
-                    .item: img(src="img/gallery-thumb.jpg", alt="")
-                    .item
-                      span.play: svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"): path(d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z")
-                      img(src="img/gallery-thumb.jpg", alt="")
-                    .item: img(src="img/gallery-thumb.jpg", alt="")
-                    .item: img(src="img/gallery-thumb.jpg", alt="")
-              -->
+              <div class="catalog--item__gallery">
+                <div class="map__container">
+                  <div id="big_map"></div>
+                </div>
+                <div class="gallery__container">
+                  <div class="gallery__container--left">
+                    <div class="gallery" data-carousel="preview"><a class="item item__video" data-mfp-src="https://www.youtube.com/watch?v=Q0oIoR9mLwc"><span class="play">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z"></path>
+                          </svg></span><img src="img/gallery-item.jpg" alt=""/></a><a class="item" data-mfp-src="img/gallery-item.jpg"><img src="img/gallery-item.jpg" alt=""/></a><a class="item" data-mfp-src="img/gallery-item.jpg"><img src="img/gallery-item.jpg" alt=""/></a><a class="item" data-mfp-src="img/gallery-item.jpg"><img src="img/gallery-item.jpg" alt=""/></a><a class="item item__video" data-mfp-src="https://www.youtube.com/watch?v=RtBbinpK5XI"><span class="play">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z"></path>
+                          </svg></span><img src="img/gallery-item.jpg" alt=""/></a><a class="item" data-mfp-src="img/gallery-item.jpg"><img src="img/gallery-item.jpg" alt=""/></a><a class="item" data-mfp-src="img/gallery-item.jpg"><img src="img/gallery-item.jpg" alt=""/></a></div>
+                  </div>
+                  <div class="gallery__container--right">
+                    <div class="gallery" data-carousel="nav">
+                      <div class="item"><span class="play">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z"></path>
+                          </svg></span><img src="img/gallery-thumb.jpg" alt=""/></div>
+                      <div class="item"><img src="img/gallery-thumb.jpg" alt=""/></div>
+                      <div class="item"><img src="img/gallery-thumb.jpg" alt=""/></div>
+                      <div class="item"><img src="img/gallery-thumb.jpg" alt=""/></div>
+                      <div class="item"><span class="play">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19.5 11.2l-14-9a1 1 0 0 0-1 0c-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9l.5.1.5-.2 14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z"></path>
+                          </svg></span><img src="img/gallery-thumb.jpg" alt=""/></div>
+                      <div class="item"><img src="img/gallery-thumb.jpg" alt=""/></div>
+                      <div class="item"><img src="img/gallery-thumb.jpg" alt=""/></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="catalog--item__description">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
